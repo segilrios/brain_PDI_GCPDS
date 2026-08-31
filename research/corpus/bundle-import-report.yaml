@@ -1,0 +1,17 @@
+candidate_ids: []
+decision: candidate_only_fail_closed
+generation_date: '2026-08-30'
+import_cap: 3
+inventory_checksums:
+  research/corpus/seed-manifest.yaml: 3d1800558ef651093614849b11615ae41172bd78645822ff69172aa15183b66b
+  research/knowledge/edges.jsonl: f60f9680fbd6417fc923ad981eed54eae8e1087478a1441beb1fa9e380d6779c
+  research/knowledge/nodes.jsonl: 24abe6ede1fb0cfe76e425f93db70bded9d19cc105a2bb6c548bff6feecf3e2a
+  research/sources/source_catalog.jsonl: c25891140ba048fc304b67d146765224f33ba4efe3e9c597892954b0a7f5fbf3
+parent_bundle: source/semillero_deep_research_source_bundle_2026-08-30
+rejections:
+- reason: authors, keywords, license, publication_type, venue, version
+  source_id: paper-geothermal-ai-2022
+- reason: canonical_source, license, reference_version, version
+  source_id: dataset-bigearthnet
+- reason: canonical_source, license, reference_version, version
+  source_id: repo-clay
