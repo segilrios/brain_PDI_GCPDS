@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .curation import curate_record, promote_record
+from .visualization import write_visualization
 from .yaml_records import dump_yaml
 from .yaml_records import load_yaml
 
@@ -13,6 +14,9 @@ def main(argv: list[str] | None = None) -> int:
     commands = parser.add_subparsers(dest="command", required=True)
     validate = commands.add_parser("validate", help="validate one canonical YAML record")
     validate.add_argument("path", type=Path)
+    visualize = commands.add_parser("visualize", help="render canonical YAML records as offline HTML")
+    visualize.add_argument("paths", nargs="+", type=Path)
+    visualize.add_argument("--output", type=Path, default=Path("build/index.html"))
     for command, help_text in (("curate", "admit a candidate as a human seed"),
                                ("promote", "promote a human seed after validation")):
         action = commands.add_parser(command, help=help_text)
@@ -24,6 +28,10 @@ def main(argv: list[str] | None = None) -> int:
             action.add_argument("--validation-evidence", action="append", required=True)
     args = parser.parse_args(argv)
     try:
+        if args.command == "visualize":
+            output = write_visualization([load_yaml(path) for path in args.paths], args.output)
+            print(f"{output}: visualization written")
+            return 0
         record = load_yaml(args.path)
         if args.command == "curate":
             record = curate_record(record, curator=args.curator, rationale=args.reason, curated_at=datetime.now(timezone.utc))
