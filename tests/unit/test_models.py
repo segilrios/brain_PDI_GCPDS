@@ -7,10 +7,10 @@ from pydantic import ValidationError
 
 from semillero_kb.models import (
     Author, AvailabilityStatus, Claim, DatasetReference, Entity, Evidence, EvidenceLocator,
-    Lifecycle, Record, Relation, RepositoryReference, Source,
+    Experiment, Lifecycle, Record, Relation, RepositoryReference, Result, Source,
 )
 from semillero_kb.validation import (
-    ResearchDomain, claim_json_schema, reference_json_schemas, validate_domain_relation,
+    ResearchDomain, claim_json_schema, experiment_json_schemas, reference_json_schemas, validate_domain_relation,
 )
 
 
@@ -74,3 +74,38 @@ def test_stable_ids_and_evidence_binding_are_fail_closed():
     with pytest.raises(ValidationError): Evidence(**record_data("evidence:ambiguous"), source_id="source:x", result_id="result:x",
         locator=EvidenceLocator(kind="uri_fragment", coordinates={"fragment": "part"}), role="supporting", stance="supports",
         assessor="curator", assessment_date=date.today(), rationale="Cannot bind twice")
+
+
+def test_reviewed_spo_projection_matches_canonical_claim_and_promotes():
+    data = payload() | {"statement": "Surface water supports observation.", "subject": "Surface water",
+                        "predicate": "supports", "object": "observation", "spo_equivalence_reviewed": True,
+                        "spo_equivalence_statement": "Surface water supports observation.",
+                        "verification_status": "source_verified"}
+    assert Claim.model_validate(data).verification_status == "source_verified"
+
+
+@pytest.mark.parametrize("overrides", [
+    {"spo_equivalence_reviewed": True, "spo_equivalence_statement": "Contradictory statement."},
+    {"spo_equivalence_reviewed": False, "verification_status": "source_verified"},
+])
+def test_inconsistent_or_unreviewed_spo_blocks_promotion(overrides):
+    data = payload() | {"subject": "Surface water", "predicate": "supports", "object": "observation"} | overrides
+    with pytest.raises(ValidationError): Claim.model_validate(data)
+
+
+def test_confidence_and_verification_status_remain_independent():
+    data = payload() | {"confidence": 0.1, "verification_status": "source_verified"}
+    assert Claim.model_validate(data).confidence == 0.1
+
+
+def test_experiment_supports_multiple_distinct_results():
+    data = json.loads((Path(__file__).parents[1] / "fixtures" / "valid_experiment.json").read_text())
+    experiment = Experiment.model_validate(data)
+    results = [Result(**record_data("result:one"), experiment_id=experiment.id, status="positive",
+                      outputs=["output:one"], metrics={"accuracy": 0.9}, limitations=["synthetic"], execution_date=date.today()),
+               Result(**record_data("result:two"), experiment_id=experiment.id, status="inconclusive",
+                      outputs=["output:two"], limitations=["small sample"], execution_date=date.today())]
+    assert {result.status for result in results} == {"positive", "inconclusive"}
+    assert all(result.experiment_id == experiment.id for result in results)
+    assert {"positive", "negative", "inconclusive", "failed"} <= set(Result.model_fields["status"].annotation)
+    assert set(experiment_json_schemas()) == {"Experiment", "Result"}

@@ -165,9 +165,51 @@ class Claim(Record):
     confidence: float = Field(ge=0, le=1)
     confidence_rationale: str = Field(min_length=1)
     verification_status: VerificationStatus = VerificationStatus.UNVERIFIED
+    subject: str | None = Field(default=None, min_length=1)
+    predicate: str | None = Field(default=None, min_length=1)
+    object: str | None = Field(default=None, min_length=1)
+    spo_equivalence_reviewed: bool = False
+    spo_equivalence_statement: str | None = None
 
     @model_validator(mode="after")
     def blocks_unsupported_promotion(self):
         if self.assertion_type is AssertionType.INFERENCE and self.verification_status is not VerificationStatus.UNVERIFIED:
             raise ValueError("an inference cannot self-promote to verified")
+        spo_fields = (self.subject, self.predicate, self.object)
+        if any(spo_fields) and not all(spo_fields):
+            raise ValueError("SPO projection requires subject, predicate, and object")
+        if all(spo_fields) and self.spo_equivalence_reviewed:
+            if self.spo_equivalence_statement != self.statement:
+                raise ValueError("reviewed SPO equivalence must match the canonical statement")
+        if all(spo_fields) and self.verification_status is not VerificationStatus.UNVERIFIED:
+            if not self.spo_equivalence_reviewed:
+                raise ValueError("unreviewed SPO projection blocks verification promotion")
         return self
+
+
+class ResultStatus(StrEnum):
+    POSITIVE = "positive"
+    NEGATIVE = "negative"
+    INCONCLUSIVE = "inconclusive"
+    FAILED = "failed"
+
+
+class Experiment(Record):
+    hypothesis: str = Field(min_length=1)
+    input_ids: list[StableId] = Field(min_length=1)
+    code_reference: str = Field(min_length=1)
+    environment: str = Field(min_length=1)
+    dependencies: list[str] = Field(min_length=1)
+    parameters: dict[str, str | int | float | bool] = Field(min_length=1)
+    seeds: list[int] = Field(min_length=1)
+    planned_metrics: list[str] = Field(min_length=1)
+    result_ids: list[StableId] = Field(min_length=1)
+
+
+class Result(Record):
+    experiment_id: StableId
+    status: ResultStatus
+    outputs: list[str] = Field(min_length=1)
+    metrics: dict[str, float] = Field(default_factory=dict)
+    limitations: list[str] = Field(min_length=1)
+    execution_date: date

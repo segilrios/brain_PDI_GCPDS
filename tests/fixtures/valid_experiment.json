@@ -1,0 +1,14 @@
+{
+  "id": "experiment:synthetic-water",
+  "provenance": "synthetic fixture",
+  "version": 1,
+  "hypothesis": "The synthetic method detects water.",
+  "input_ids": ["dataset:synthetic-water"],
+  "code_reference": "repository:synthetic-method",
+  "environment": "Python 3.12",
+  "dependencies": ["pydantic==2"],
+  "parameters": {"threshold": 0.5},
+  "seeds": [42],
+  "planned_metrics": ["accuracy"],
+  "result_ids": ["result:one", "result:two"]
+}
