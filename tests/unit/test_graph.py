@@ -47,7 +47,7 @@ def test_provenance_is_bidirectional_and_deterministic_without_inventing_records
 def test_contradictions_and_selected_subgraph_are_stable_and_firewall_agnostic():
     graph = build_graph(graph_fixture())
     assert contradictions(graph) == ["claim:conflict"]
-    subgraph = selected_subgraph(graph, ["method:eo", "entity:water"])
+    subgraph = selected_subgraph(graph, ["method:eo", "entity:water", "method:eo"])
     assert list(subgraph.nodes) == ["entity:water", "method:eo"]
     assert list(subgraph.edges(keys=True)) == [("entity:water", "method:eo", "relation:measures"),
                                                 ("entity:water", "method:eo", "relation:uses")]

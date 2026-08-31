@@ -73,4 +73,13 @@ def contradictions(graph: nx.MultiDiGraph) -> list[str]:
 
 def selected_subgraph(graph: nx.MultiDiGraph, identifiers: Iterable[str]) -> nx.MultiDiGraph:
     """Return a deterministic copy containing only explicitly selected nodes."""
-    return graph.subgraph(sorted(set(identifiers))).copy()
+    selected_ids = sorted(set(identifiers))
+    subgraph = nx.MultiDiGraph()
+    subgraph.graph.update(graph.graph)
+    for identifier in selected_ids:
+        if graph.has_node(identifier):
+            subgraph.add_node(identifier, **graph.nodes[identifier])
+    for source, target, key, data in graph.edges(keys=True, data=True):
+        if source in subgraph and target in subgraph:
+            subgraph.add_edge(source, target, key=key, **data)
+    return subgraph
