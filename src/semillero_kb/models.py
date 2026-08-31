@@ -32,6 +32,12 @@ class VerificationStatus(StrEnum):
     INCONCLUSIVE = "inconclusive"
 
 
+class AvailabilityStatus(StrEnum):
+    AVAILABLE_LOCAL = "available_local"
+    EXTERNAL_ONLY = "external_only"
+    UNAVAILABLE = "unavailable"
+
+
 class LocatorKind(StrEnum):
     PDF_PAGE_SECTION = "pdf_page_section"
     HEADING_ANCHOR = "heading_anchor"
@@ -76,6 +82,78 @@ class Record(BaseModel):
         if self.lifecycle is not Lifecycle.ACTIVE and not all((self.predecessor_id, self.lifecycle_reason, self.lifecycle_date, self.lifecycle_actor)):
             raise ValueError("non-active records require predecessor, reason, date, and actor")
         return self
+
+
+class Author(Record):
+    name: str = Field(min_length=1)
+    kind: str | None = None
+    identifier: str | None = None
+
+
+class Source(Record):
+    title: str = Field(min_length=1)
+    authors: list[Author] = Field(min_length=1)
+    year: int = Field(ge=0)
+    doi: str | None = None
+    url: str | None = None
+    venue: str = Field(min_length=1)
+    publication_type: str = Field(min_length=1)
+    domains: list[str] = Field(min_length=1)
+    keywords: list[str] = Field(min_length=1)
+    access_date: date
+    availability_status: AvailabilityStatus
+    verification_status: VerificationStatus = VerificationStatus.UNVERIFIED
+    license: str | None = None
+    local_path: str | None = None
+    checksum: str | None = None
+
+
+class Evidence(Record):
+    source_id: StableId | None = None
+    result_id: StableId | None = None
+    locator: EvidenceLocator
+    role: str = Field(min_length=1)
+    stance: str = Field(min_length=1)
+    assessor: str = Field(min_length=1)
+    assessment_date: date
+    rationale: str = Field(min_length=1)
+
+    @model_validator(mode="after")
+    def binds_one_subject(self):
+        if (self.source_id is None) == (self.result_id is None):
+            raise ValueError("evidence requires exactly one source_id or result_id")
+        return self
+
+
+class Entity(Record):
+    entity_type: str = Field(min_length=1)
+    label: str = Field(min_length=1)
+
+
+class Relation(Record):
+    subject_id: StableId
+    predicate: str = Field(min_length=1)
+    object_id: StableId
+    directed: bool = True
+
+
+class ExternalReference(Record):
+    canonical_source: str = Field(min_length=1)
+    url: str = Field(min_length=1)
+    reference_version: str = Field(min_length=1)
+    license: str | None = None
+    acquisition_date: date
+    availability_status: AvailabilityStatus
+    local_path: str | None = None
+    checksum: str | None = None
+
+
+class DatasetReference(ExternalReference):
+    pass
+
+
+class RepositoryReference(ExternalReference):
+    pass
 
 
 class Claim(Record):

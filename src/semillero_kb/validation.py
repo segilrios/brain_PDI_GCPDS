@@ -1,7 +1,7 @@
 """Fail-closed semantic safeguards outside the storage and graph layers."""
 from enum import StrEnum
 
-from .models import Claim
+from .models import Claim, DatasetReference, RepositoryReference, Source
 
 
 class ResearchDomain(StrEnum):
@@ -14,6 +14,11 @@ class ResearchDomain(StrEnum):
 def claim_json_schema() -> dict:
     """Return the portable JSON Schema generated from the authoritative model."""
     return Claim.model_json_schema()
+
+
+def reference_json_schemas() -> dict[str, dict]:
+    """Return portable schemas for records that may only exist externally."""
+    return {model.__name__: model.model_json_schema() for model in (Source, DatasetReference, RepositoryReference)}
 
 
 def validate_domain_relation(subject: ResearchDomain, predicate: str, object_: ResearchDomain) -> None:
