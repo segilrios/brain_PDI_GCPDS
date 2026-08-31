@@ -1,6 +1,7 @@
 id: claim:synthetic-water
 provenance: synthetic fixture
 version: 3
+predecessor_id: claim:synthetic-water-v2
 statement: Surface water supports observation.
 source_id: source:synthetic
 locator:

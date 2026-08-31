@@ -3,6 +3,8 @@ from pathlib import Path
 import pytest
 
 from semillero_kb.cli import main
+from semillero_kb.models import Lifecycle
+from semillero_kb.validation import transition_record
 from semillero_kb.yaml_records import dump_yaml, load_yaml
 
 
@@ -41,3 +43,12 @@ def test_canonical_layout_is_present():
     assert {"sources", "claims", "graph", "experiments", "corpus", "assets", "taxonomy"} == {
         path.name for path in root.iterdir() if path.is_dir()
     }
+
+
+def test_yaml_persists_lifecycle_history(tmp_path):
+    record = transition_record(load_yaml(FIXTURE), Lifecycle.DEPRECATED, actor="curator",
+                               reason="superseded terminology", transition_date="2026-08-30")
+    path = tmp_path / "deprecated.yaml"
+    path.write_text(dump_yaml(record), encoding="utf-8")
+    loaded = load_yaml(path)
+    assert loaded.lifecycle_history[-1].actor == "curator"

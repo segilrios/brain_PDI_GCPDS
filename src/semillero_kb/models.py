@@ -15,6 +15,30 @@ class Lifecycle(StrEnum):
     RETRACTED = "retracted"
 
 
+class LifecycleTransition(BaseModel):
+    previous_state: Lifecycle
+    next_state: Lifecycle
+    actor: str = Field(min_length=1)
+    transition_date: date
+    reason: str = Field(min_length=1)
+    predecessor_id: StableId | None = None
+    successor_id: StableId | None = None
+
+    @model_validator(mode="after")
+    def validates_transition(self):
+        allowed = {
+            Lifecycle.ACTIVE: {Lifecycle.DEPRECATED, Lifecycle.SUPERSEDED, Lifecycle.RETRACTED},
+            Lifecycle.DEPRECATED: {Lifecycle.SUPERSEDED, Lifecycle.RETRACTED},
+        }
+        if self.next_state not in allowed.get(self.previous_state, set()):
+            raise ValueError("lifecycle transition is not allowed")
+        if self.next_state is Lifecycle.SUPERSEDED and self.successor_id is None:
+            raise ValueError("superseded records require a successor_id")
+        if self.successor_id is not None and self.next_state is not Lifecycle.SUPERSEDED:
+            raise ValueError("successor_id is only valid for supersession")
+        return self
+
+
 class AssertionType(StrEnum):
     OBSERVATION = "observation"
     CLAIM = "claim"
@@ -73,14 +97,21 @@ class Record(BaseModel):
     version: int = Field(ge=1)
     lifecycle: Lifecycle = Lifecycle.ACTIVE
     predecessor_id: StableId | None = None
-    lifecycle_reason: str | None = None
-    lifecycle_date: date | None = None
-    lifecycle_actor: str | None = None
+    lifecycle_history: list[LifecycleTransition] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def preserves_lifecycle_history(self):
-        if self.lifecycle is not Lifecycle.ACTIVE and not all((self.predecessor_id, self.lifecycle_reason, self.lifecycle_date, self.lifecycle_actor)):
-            raise ValueError("non-active records require predecessor, reason, date, and actor")
+        if self.predecessor_id == self.id:
+            raise ValueError("a record cannot precede itself")
+        if self.version > 1 and self.predecessor_id is None:
+            raise ValueError("version progression requires predecessor_id")
+        state = Lifecycle.ACTIVE
+        for transition in self.lifecycle_history:
+            if transition.previous_state is not state:
+                raise ValueError("lifecycle history must be contiguous")
+            state = transition.next_state
+        if state is not self.lifecycle:
+            raise ValueError("lifecycle must match its recorded transition history")
         return self
 
 

@@ -7,10 +7,11 @@ from pydantic import ValidationError
 
 from semillero_kb.models import (
     Author, AvailabilityStatus, Claim, DatasetReference, Entity, Evidence, EvidenceLocator,
-    Experiment, Lifecycle, Record, Relation, RepositoryReference, Result, Source,
+    Experiment, Lifecycle, LifecycleTransition, Record, Relation, RepositoryReference, Result, Source,
 )
 from semillero_kb.validation import (
-    ResearchDomain, claim_json_schema, experiment_json_schemas, reference_json_schemas, validate_domain_relation,
+    ResearchDomain, claim_json_schema, experiment_json_schemas, reference_json_schemas, transition_record,
+    validate_domain_relation,
 )
 
 
@@ -34,8 +35,10 @@ def test_epistemic_fields_are_validated(field, value):
 def test_locator_and_lifecycle_are_fail_closed():
     with pytest.raises(ValidationError): EvidenceLocator(kind="pdf_page_section", coordinates={"page": "1"})
     with pytest.raises(ValidationError): Record(id="record:old", provenance="test", version=1, lifecycle=Lifecycle.RETRACTED)
-    record = Record(id="record:old", provenance="test", version=1, lifecycle=Lifecycle.RETRACTED, predecessor_id="record:new", lifecycle_reason="corrected", lifecycle_date=date.today(), lifecycle_actor="curator")
-    assert record.lifecycle is Lifecycle.RETRACTED
+    with pytest.raises(ValidationError): LifecycleTransition(
+        previous_state=Lifecycle.ACTIVE, next_state=Lifecycle.SUPERSEDED,
+        actor="curator", transition_date=date.today(), reason="corrected",
+    )
 
 
 def test_domain_firewall_rejects_conflation():
@@ -109,3 +112,30 @@ def test_experiment_supports_multiple_distinct_results():
     assert all(result.experiment_id == experiment.id for result in results)
     assert {"positive", "negative", "inconclusive", "failed"} <= set(Result.model_fields["status"].annotation)
     assert set(experiment_json_schemas()) == {"Experiment", "Result"}
+
+
+def test_lifecycle_transitions_preserve_history_and_retractions():
+    record = Record(id="record:obsolete", provenance="test", version=1)
+    deprecated = transition_record(record, Lifecycle.DEPRECATED, actor="curator", reason="obsolete", transition_date=date.today())
+    retracted = transition_record(deprecated, Lifecycle.RETRACTED, actor="editor", reason="invalid evidence", transition_date=date.today())
+    assert record.lifecycle is Lifecycle.ACTIVE
+    assert [(item.previous_state, item.next_state) for item in retracted.lifecycle_history] == [
+        (Lifecycle.ACTIVE, Lifecycle.DEPRECATED), (Lifecycle.DEPRECATED, Lifecycle.RETRACTED),
+    ]
+    assert retracted.lifecycle_history[-1].reason == "invalid evidence"
+
+
+def test_supersession_requires_successor_and_explicit_version_predecessor():
+    record = Record(id="record:old", provenance="test", version=1)
+    superseded = transition_record(record, Lifecycle.SUPERSEDED, actor="curator", reason="revised", transition_date=date.today(), successor_id="record:new")
+    successor = Record(id="record:new", provenance="test", version=2, predecessor_id=record.id)
+    assert superseded.lifecycle_history[-1].successor_id == successor.id
+    assert transition_record(successor, Lifecycle.DEPRECATED, actor="curator", reason="old draft", transition_date=date.today()).lifecycle_history[-1].predecessor_id == record.id
+    with pytest.raises(ValidationError): Record(id="record:missing-link", provenance="test", version=2)
+
+
+def test_invalid_lifecycle_transitions_fail_closed_without_delete_api():
+    retracted = transition_record(Record(id="record:kept", provenance="test", version=1), Lifecycle.RETRACTED,
+                                  actor="curator", reason="invalid", transition_date=date.today())
+    with pytest.raises(ValueError): transition_record(retracted, Lifecycle.ACTIVE, actor="curator", reason="restore", transition_date=date.today())
+    assert not hasattr(__import__("semillero_kb.validation", fromlist=["delete_record"]), "delete_record")
