@@ -1,0 +1,15 @@
+id: claim:synthetic-water
+provenance: synthetic fixture
+version: 3
+statement: Surface water supports observation.
+source_id: source:synthetic
+locator:
+  kind: pdf_page_section
+  coordinates:
+    page: "1"
+    section: Methods
+extraction_date: 2026-08-30
+assertion_type: claim
+confidence: 0.7
+confidence_rationale: Synthetic test evidence
+verification_status: unverified

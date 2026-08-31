@@ -7,7 +7,10 @@ name = "semillero-kb"
 version = "0.1.0"
 description = "Local-first research knowledge-base contracts"
 requires-python = ">=3.12"
-dependencies = ["pydantic>=2.12,<3"]
+dependencies = ["pydantic>=2.12,<3", "PyYAML>=6,<7"]
+
+[project.scripts]
+semillero-kb = "semillero_kb.cli:main"
 
 [project.optional-dependencies]
 test = ["pytest>=9,<10"]
