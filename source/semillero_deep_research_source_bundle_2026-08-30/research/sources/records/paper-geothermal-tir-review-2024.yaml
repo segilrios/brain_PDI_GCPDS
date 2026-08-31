@@ -1,0 +1,21 @@
+id: paper-geothermal-tir-review-2024
+kind: paper
+title: Advances in Thermal Infrared Remote Sensing Technology for Geothermal Resource Detection
+authors: []
+year: 2024
+role:
+- review
+- methodological
+domains:
+- geothermal
+- thermal_infrared
+- remote_sensing
+doi: 10.3390/rs16101690
+url: https://www.mdpi.com/2072-4292/16/10/1690
+access: open_access
+importance: Modern TIR-focused review; stresses integration with geology, geophysics and geochemistry.
+connections:
+- concept-tir
+- concept-geothermal-prospectivity
+evidence_note: Thermal anomalies are surface evidence and require target-specific corroboration.
+link_category: academic

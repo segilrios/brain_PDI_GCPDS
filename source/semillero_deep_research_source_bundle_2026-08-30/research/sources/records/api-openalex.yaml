@@ -1,0 +1,20 @@
+id: api-openalex
+kind: api
+title: OpenAlex API / Help
+authors:
+- OurResearch
+year: 2026
+role:
+- discovery_api
+domains:
+- bibliography
+- literature_discovery
+url: https://help.openalex.org/
+access: public_api
+importance: Open scholarly graph for works, authors, institutions and citations; useful for forward/backward expansion.
+connections:
+- api-crossref
+- api-semanticscholar
+link_category: infrastructure
+doi: null
+evidence_note: ''

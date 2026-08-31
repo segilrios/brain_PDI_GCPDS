@@ -1,0 +1,24 @@
+id: paper-groundwater-ml-review-2026
+kind: paper
+title: 'Groundwater Potential Mapping Using Machine Learning Techniques: Current Trends and Future Perspectives'
+authors: []
+year: 2026
+role:
+- review
+- state_of_the_art
+domains:
+- groundwater_potential
+- machine_learning
+- gis
+- remote_sensing
+doi: null
+url: https://www.mdpi.com/2073-4441/18/8/947
+access: open_access
+importance: Recent synthesis emphasizing explainability, uncertainty, multi-source integration and transferability as research
+  gaps.
+connections:
+- concept-groundwater-potential
+- concept-xai
+- concept-uncertainty
+evidence_note: Useful state-of-the-art map; quality depends on validation and regional transfer.
+link_category: academic

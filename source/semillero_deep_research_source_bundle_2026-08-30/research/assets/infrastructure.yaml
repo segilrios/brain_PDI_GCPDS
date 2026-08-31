@@ -1,0 +1,70 @@
+- id: infra-networkx
+  title: NetworkX MultiDiGraph documentation
+  url: https://networkx.org/documentation/stable/reference/classes/index.html
+  year: 2026
+  access: open_docs
+  importance: Supports directed graphs with parallel edges, matching qualified scientific relations in the V1 design.
+  domains:
+  - knowledge_graph
+- id: infra-pyvis
+  title: PyVis documentation
+  url: https://pyvis.readthedocs.io/en/latest/
+  year: 2026
+  access: open_docs
+  importance: Interactive HTML network visualization with NetworkX integration; suitable as a derived V1 view.
+  domains:
+  - knowledge_graph
+  - visualization
+- id: infra-pydantic
+  title: Pydantic JSON Schema documentation
+  url: https://docs.pydantic.dev/latest/concepts/json_schema/
+  year: 2026
+  access: open_docs
+  importance: Typed validation plus standards-compliant JSON Schema generation for scientific records.
+  domains:
+  - data_validation
+  - knowledge_graph
+- id: infra-sqlite-fts5
+  title: SQLite FTS5 Extension
+  url: https://www.sqlite.org/fts5.html
+  year: 2026
+  access: open_docs
+  importance: Local deterministic full-text search layer appropriate for a rebuildable V1 index.
+  domains:
+  - search
+  - knowledge_graph
+- id: api-openalex
+  title: OpenAlex API / Help
+  url: https://help.openalex.org/
+  year: 2026
+  access: public_api
+  importance: Open scholarly graph for works, authors, institutions and citations; useful for forward/backward expansion.
+  domains:
+  - bibliography
+  - literature_discovery
+- id: api-crossref
+  title: Crossref REST API
+  url: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+  year: 2026
+  access: public_api
+  importance: Canonical DOI metadata retrieval and normalization.
+  domains:
+  - bibliography
+  - doi
+- id: api-semanticscholar
+  title: Semantic Scholar Academic Graph API
+  url: https://api.semanticscholar.org/api-docs/
+  year: 2026
+  access: public_api
+  importance: Paper/citation graph API useful as a complementary discovery source.
+  domains:
+  - bibliography
+  - literature_discovery
+- id: infra-csl
+  title: Citation Style Language specification
+  url: https://docs.citationstyles.org/en/stable/specification.html
+  year: 2026
+  access: open_docs
+  importance: Interoperable citation/bibliography representation supporting the DESIGN choice of generated CSL-JSON.
+  domains:
+  - bibliography

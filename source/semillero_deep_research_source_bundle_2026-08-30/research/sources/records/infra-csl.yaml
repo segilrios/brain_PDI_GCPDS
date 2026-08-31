@@ -1,0 +1,18 @@
+id: infra-csl
+kind: documentation
+title: Citation Style Language specification
+authors:
+- Citation Style Language project
+year: 2026
+role:
+- bibliography_format
+domains:
+- bibliography
+url: https://docs.citationstyles.org/en/stable/specification.html
+access: open_docs
+importance: Interoperable citation/bibliography representation supporting the DESIGN choice of generated CSL-JSON.
+connections:
+- api-crossref
+link_category: infrastructure
+doi: null
+evidence_note: ''

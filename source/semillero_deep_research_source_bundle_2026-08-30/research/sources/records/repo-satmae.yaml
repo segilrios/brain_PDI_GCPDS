@@ -1,0 +1,19 @@
+id: repo-satmae
+kind: repository
+title: sustainlab-group/SatMAE
+authors:
+- SustainLab
+year: 2022
+role:
+- implementation
+domains:
+- earth_observation
+- foundation_models
+url: https://github.com/sustainlab-group/SatMAE
+access: open_source
+importance: Official SatMAE code for temporal and multispectral masked-autoencoder pretraining.
+connections:
+- paper-satmae-2022
+link_category: implementation
+doi: null
+evidence_note: ''

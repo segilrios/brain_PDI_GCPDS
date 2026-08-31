@@ -1,0 +1,35 @@
+﻿source,relation,target,note
+paper-pekel-2016-gsw,dataset-jrc-gsw-v1-4,HAS_DATASET,Paper underpins the global surface-water product.
+dataset-jrc-gsw-v1-4,dataset-landsat-c2-sr,DERIVED_FROM,GSW is Landsat-derived.
+paper-prithvi-eo2-2024,dataset-hls-v2,USES_DATASET,Prithvi-EO-2.0 pretraining uses HLS time series.
+paper-prithvi-eo2-2024,repo-prithvi-eo2,HAS_CODE,Official implementation and fine-tuning examples.
+repo-prithvi-eo2,repo-terratorch,USES,Prithvi examples are based on TerraTorch.
+paper-terramind-2025,repo-terramind,HAS_CODE,Official implementation.
+repo-terramind,repo-terratorch,USES,TerraMind is integrated into TerraTorch.
+paper-satmae-2022,repo-satmae,HAS_CODE,Official SatMAE implementation.
+paper-satmae-2022,paper-prithvi-eo2-2024,PREREQUISITE_OF,Earlier MAE-based EO pretraining is a conceptual precursor.
+paper-rsfm-survey-2025,paper-prithvi-eo2-2024,REVIEWS,Survey situates Prithvi in the RSFM landscape.
+paper-rsfm-survey-2025,paper-terramind-2025,RELATED_FRONTIER,TerraMind is part of the rapidly evolving multimodal RSFM frontier.
+repo-dofa,repo-terratorch,IMPLEMENTED_WITH,DOFA examples are available in TerraTorch.
+repo-terratorch,repo-torchgeo,BUILDS_ON,TerraTorch is a geospatial fine-tuning layer within the TorchGeo ecosystem.
+dataset-bigearthnet,repo-torchgeo,AVAILABLE_IN,TorchGeo supports many EO benchmark datasets including BigEarthNet.
+dataset-bigearthnet-txt,dataset-bigearthnet,EXTENDS,Adds large-scale multi-sensor text annotations to the BigEarthNet lineage.
+paper-groundwater-validation-review-2024,concept-groundwater-potential,VALIDATES,Establishes validation practices for GPM.
+paper-groundwater-ml-review-2026,paper-groundwater-validation-review-2024,EXTENDS,Moves from validation review toward ML/XAI/uncertainty/transferability frontier.
+paper-kle-pinn-groundwater-2024,concept-pinn,APPLIES_TO,PINN/KLE applied to groundwater inverse modeling.
+paper-kle-pinn-groundwater-2024,concept-hydraulic-conductivity,ESTIMATES,Targets hydraulic conductivity field estimation.
+paper-geothermal-rs-review-2014,concept-swir,USES_FEATURE,Alteration mineral mapping.
+paper-geothermal-rs-review-2014,concept-tir,USES_FEATURE,Temperature and heat-flux evidence.
+paper-geothermal-rs-review-2014,concept-insar,USES_FEATURE,Surface deformation evidence.
+paper-geothermal-review-2026,paper-geothermal-ml-review-2023,EXTENDS,Updates methodology trends and emphasizes hybrid/XAI/uncertainty.
+paper-geothermal-tir-review-2024,concept-tir,REVIEWS,TIR-focused geothermal detection review.
+paper-geothermal-early-ml-2026,concept-lst,USES_FEATURE,Land surface temperature used as a surface manifestation.
+paper-geothermal-early-ml-2026,concept-lineaments,USES_FEATURE,Lineament density used as structural proxy.
+paper-geothermal-early-ml-2026,concept-hydrothermal-alteration,USES_FEATURE,Hydrothermal alteration used as surface proxy.
+dataset-usgs-geothermal,concept-geothermal-prospectivity,VALIDATED_BY,Official geoscientific datasets can support/validate prospectivity studies.
+infra-networkx,infra-pyvis,VISUALIZED_BY,PyVis can render NetworkX graphs as interactive HTML.
+infra-pydantic,infra-networkx,VALIDATES_INPUT_FOR,Typed records can be validated before graph derivation.
+infra-sqlite-fts5,infra-networkx,INDEXES_DERIVED_DATA_FROM,FTS5 can index canonical/derived scientific records for local search.
+api-crossref,api-openalex,COMPLEMENTS,Crossref DOI metadata complements OpenAlex citation graph.
+api-semanticscholar,api-openalex,COMPLEMENTS,Alternative scholarly citation/discovery graph.
+api-crossref,infra-csl,EXPORTS_TO,DOI metadata can be normalized into CSL-JSON.

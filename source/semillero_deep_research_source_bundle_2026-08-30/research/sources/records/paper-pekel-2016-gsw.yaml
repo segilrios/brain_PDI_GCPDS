@@ -1,0 +1,26 @@
+id: paper-pekel-2016-gsw
+kind: paper
+title: High-resolution mapping of global surface water and its long-term changes
+authors:
+- Jean-François Pekel
+- Andrew Cottam
+- Noel Gorelick
+- Alan S. Belward
+year: 2016
+role:
+- seminal
+- foundational
+- benchmark
+domains:
+- surface_water
+- earth_observation
+doi: 10.1038/nature20584
+url: https://www.nature.com/articles/nature20584
+access: publisher_page
+importance: Foundational global surface-water mapping reference; establishes a long temporal Landsat baseline and the JRC
+  Global Surface Water product.
+connections:
+- dataset-jrc-gsw-v1-4
+- dataset-landsat-c2-sr
+evidence_note: Direct EO observation of surface-water occurrence/change; must not be generalized to groundwater presence.
+link_category: academic

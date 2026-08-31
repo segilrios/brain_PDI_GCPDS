@@ -1,0 +1,24 @@
+id: repo-samgeo
+kind: repository
+title: segment-geospatial (SamGeo)
+authors:
+- Qiusheng Wu
+- Lucas Prado Osco
+- contributors
+year: 2023
+role:
+- implementation
+- segmentation
+domains:
+- earth_observation
+- segmentation
+- foundation_models
+url: https://github.com/opengeos/segment-geospatial
+access: open_source
+importance: Practical geospatial SAM tooling for raster/vector segmentation and interactive workflows.
+connections:
+- concept-segmentation
+- repo-torchgeo
+link_category: implementation
+doi: null
+evidence_note: ''

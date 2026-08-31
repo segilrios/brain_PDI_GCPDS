@@ -1,0 +1,530 @@
+{
+  "generated": "2026-08-30",
+  "files": [
+    {
+      "path": "ALL_LINKS.md",
+      "bytes": 4839,
+      "sha256": "28215f795425ac6121771bc83d7e70bda9414b6f65e1f45a54f9c0e18a53fd62"
+    },
+    {
+      "path": "LICENSE_AND_SOURCE_POLICY.md",
+      "bytes": 683,
+      "sha256": "b04d28061a14ae44912358be748839e7f2bce6f840f9262ede79f2d2b89d2766"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1771,
+      "sha256": "8dc1de7d7d07d1d4b18507bc55ac281162e57807faedb56a48cba633a8934057"
+    },
+    {
+      "path": "attachments/76e125b3-1ee0-4a94-8303-f09c2290b8ef.png",
+      "bytes": 1245548,
+      "sha256": "2b8cbc27fe270f65842a1cc7bb653f8cbf2577d6e923dafece122f31dee7d450"
+    },
+    {
+      "path": "attachments/8e7cf8af-a142-4bac-b7e8-71fcf48869b1.png",
+      "bytes": 1245548,
+      "sha256": "2b8cbc27fe270f65842a1cc7bb653f8cbf2577d6e923dafece122f31dee7d450"
+    },
+    {
+      "path": "links/academic/paper-geothermal-ai-2022.url",
+      "bytes": 91,
+      "sha256": "48a0b1d3e02e61e8670636a18649477f3169f64d8a45bd29c2572c522683123d"
+    },
+    {
+      "path": "links/academic/paper-geothermal-early-ml-2026.url",
+      "bytes": 95,
+      "sha256": "8e60505cc70127eea7560c02c96df5051bb44f237a4bb03d7262b825542e27f8"
+    },
+    {
+      "path": "links/academic/paper-geothermal-japan-2026.url",
+      "bytes": 93,
+      "sha256": "4cd8e99acbe4dfb5434e81ebd29d2361db8c9d6ad3b32a7db3205cefad6e1de9"
+    },
+    {
+      "path": "links/academic/paper-geothermal-ml-review-2023.url",
+      "bytes": 91,
+      "sha256": "3e0c6cb1158c367a7d79d444219ccb1c89d7c10b9627e258c0d21ca21e74d6b4"
+    },
+    {
+      "path": "links/academic/paper-geothermal-review-2026.url",
+      "bytes": 91,
+      "sha256": "b38c45442b297d67c02b61bc39fa6b03bed3e7daad6c1c3ffae3d7deae788d41"
+    },
+    {
+      "path": "links/academic/paper-geothermal-rs-review-2014.url",
+      "bytes": 95,
+      "sha256": "1ab8545dd0858cdbb617516f1a6db163f45f78e691c7c84648048b67b49d2563"
+    },
+    {
+      "path": "links/academic/paper-geothermal-tir-review-2024.url",
+      "bytes": 65,
+      "sha256": "ea46832d1b8cb24926acb3f437df32b6cc4f3991c17cd1279ec9c9462f87c9e1"
+    },
+    {
+      "path": "links/academic/paper-groundwater-ml-review-2026.url",
+      "bytes": 63,
+      "sha256": "81094db0fe810fbbcb6fc892dc8d0f8e2d69af13f27c49bebe3d67fa3355d67d"
+    },
+    {
+      "path": "links/academic/paper-groundwater-validation-review-2024.url",
+      "bytes": 68,
+      "sha256": "1424d0fd78707f071dc0ced00da88130ad8809f0bd5b6bc48a2f72c33672fa4c"
+    },
+    {
+      "path": "links/academic/paper-hls-v2-2025.url",
+      "bytes": 60,
+      "sha256": "6456758965ebf1fcc01c2397ead8fd002aca9d6ff41ba0cddde69c987ca8cb26"
+    },
+    {
+      "path": "links/academic/paper-kle-pinn-groundwater-2024.url",
+      "bytes": 91,
+      "sha256": "1ddb3ed1768a76fbd864895eb4bf3357d7f87b80619fc7dac73a8c7da42c8a2f"
+    },
+    {
+      "path": "links/academic/paper-pekel-2016-gsw.url",
+      "bytes": 67,
+      "sha256": "270de18b67982e20fa58e1866dea4c102161a88779b0598a9f3e13144e353352"
+    },
+    {
+      "path": "links/academic/paper-prithvi-eo2-2024.url",
+      "bytes": 56,
+      "sha256": "7b3065c8b13b6afa7faebbc33870d89c94e4fd7a5be79cfa3c83c5801bf9f9d3"
+    },
+    {
+      "path": "links/academic/paper-rsfm-survey-2025.url",
+      "bytes": 56,
+      "sha256": "b83ae3c3e3787ce6d905041b68aa8c8bbeb6632953caa598a9e76503c98000f2"
+    },
+    {
+      "path": "links/academic/paper-satmae-2022.url",
+      "bytes": 56,
+      "sha256": "af03322ede849a84fef6ba9a8b7e08e995cf9345dfc683a49fd78b21839feb7b"
+    },
+    {
+      "path": "links/academic/paper-terramind-2025.url",
+      "bytes": 56,
+      "sha256": "ca29b245c18985ba548d3f043e6d4b4c1496d00bf5f10f70d43c8b0032e08d77"
+    },
+    {
+      "path": "links/academic/paper-vfm-rs-survey-2024.url",
+      "bytes": 56,
+      "sha256": "542e75c1269e060462e288c6c32d5991d92cfe930c5770606be3aff26901d7cf"
+    },
+    {
+      "path": "links/datasets/dataset-bigearthnet-txt.url",
+      "bytes": 49,
+      "sha256": "0a3a3f721cd43d3a66426fda44a024dfe0d6f38c248ff43225778f2c0e68730f"
+    },
+    {
+      "path": "links/datasets/dataset-bigearthnet.url",
+      "bytes": 45,
+      "sha256": "d6f764c016898573dee4610836e866518274ba027c0a9bc53114cce1f89845fc"
+    },
+    {
+      "path": "links/datasets/dataset-hls-v2.url",
+      "bytes": 72,
+      "sha256": "78889912015e03db61f624dac4bf34d3ec9593a429ae2a6a4bce93bb05e6c48d"
+    },
+    {
+      "path": "links/datasets/dataset-jrc-gsw-v1-4.url",
+      "bytes": 113,
+      "sha256": "7d49c2ba81c3c301bb77ed2744b0a8e21c14c2b0bc4855725e839b51a638400f"
+    },
+    {
+      "path": "links/datasets/dataset-landsat-c2-sr.url",
+      "bytes": 102,
+      "sha256": "715a89d99f4419262a5cdfd8411cdf23421d2e2d2bb81aa1166e462de694a917"
+    },
+    {
+      "path": "links/datasets/dataset-sentinel2.url",
+      "bytes": 119,
+      "sha256": "5d841711866726248155546642824b37ba896193de7becb252e0d1b28c9072e6"
+    },
+    {
+      "path": "links/datasets/dataset-usgs-geothermal.url",
+      "bytes": 107,
+      "sha256": "7a15ea1eaa0370bf9d2a3b25d75320edc626c27d4a8d91e982078ab9f1f80274"
+    },
+    {
+      "path": "links/implementation/repo-clay.url",
+      "bytes": 64,
+      "sha256": "14a6b437371f25bc0f01b2a83afd69acbb7c992f18fa2260713687132cc13000"
+    },
+    {
+      "path": "links/implementation/repo-dofa.url",
+      "bytes": 56,
+      "sha256": "be29ece8edc2591e6398becfde536735cb2ca9f15cf58dcc50ca5e629c1c508b"
+    },
+    {
+      "path": "links/implementation/repo-prithvi-eo2.url",
+      "bytes": 69,
+      "sha256": "7a14200aa7070c9e8651d646a0ead539ee889cd45942da99e1c33a056839c1cf"
+    },
+    {
+      "path": "links/implementation/repo-samgeo.url",
+      "bytes": 70,
+      "sha256": "d37e9e6af87dd617a098f131c2624266344392794850d6f4ee14f82710db0e75"
+    },
+    {
+      "path": "links/implementation/repo-satlas-models.url",
+      "bytes": 72,
+      "sha256": "379b8e8d6f6c96d1b65448f50b373fdbe7b49d26d413b178507cd0d619e5676b"
+    },
+    {
+      "path": "links/implementation/repo-satlas.url",
+      "bytes": 57,
+      "sha256": "590e74f44bb7ac230d0e8dc08b29a0804d1d55f953807339e5d2692803897ba3"
+    },
+    {
+      "path": "links/implementation/repo-satmae.url",
+      "bytes": 66,
+      "sha256": "4b2bc8c59b317ddf74649264e4c60e242ea268cac509f5275a56206eb3ada44a"
+    },
+    {
+      "path": "links/implementation/repo-terramind.url",
+      "bytes": 56,
+      "sha256": "cd1dee8a0ac327f7c122a64386c2dff5cbbb76a0395623e3229a3ad64dfb702b"
+    },
+    {
+      "path": "links/implementation/repo-terratorch.url",
+      "bytes": 62,
+      "sha256": "5b586728c50af7ed38e3400f1069065498f8dcb6e6e15d9b3039d4ef771205dc"
+    },
+    {
+      "path": "links/implementation/repo-torchgeo.url",
+      "bytes": 60,
+      "sha256": "e762207916f99a27af2f15deb79b93546894641b8179181ee5c79a0b4adb0dc0"
+    },
+    {
+      "path": "links/infrastructure/api-crossref.url",
+      "bytes": 90,
+      "sha256": "af687520be3815ccdaa26df7634a75f8511af67774a98929991e6df611673cea"
+    },
+    {
+      "path": "links/infrastructure/api-openalex.url",
+      "bytes": 50,
+      "sha256": "56593299c74739b258a9ce1d45986b8a3ba019edf4b014d2a418adf545ad718d"
+    },
+    {
+      "path": "links/infrastructure/api-semanticscholar.url",
+      "bytes": 65,
+      "sha256": "c753297ba6288a08e6fac5d3ef3502205b9a8531af4b068054e4388fade959d0"
+    },
+    {
+      "path": "links/infrastructure/infra-csl.url",
+      "bytes": 84,
+      "sha256": "c39d3386b95021598b67952bbd4580ed86d174446e5a677ad3241b504037c15a"
+    },
+    {
+      "path": "links/infrastructure/infra-networkx.url",
+      "bytes": 94,
+      "sha256": "74301888b04666dc9d6722b778c8b08abbdb3351165c1028ee2dca2099ef74e3"
+    },
+    {
+      "path": "links/infrastructure/infra-pydantic.url",
+      "bytes": 78,
+      "sha256": "652ab39850857bd9df2230f9ff627e529c6053a393272f1f77b653e93426c327"
+    },
+    {
+      "path": "links/infrastructure/infra-pyvis.url",
+      "bytes": 63,
+      "sha256": "5dc68c166ce6f3a6d90baf08301d96cf8754dffcae92ff0061b53f8a53c6e75a"
+    },
+    {
+      "path": "links/infrastructure/infra-sqlite-fts5.url",
+      "bytes": 56,
+      "sha256": "10920f656640a1af6e04aee7603334d57b59b7a1406e1ca25d742f9760b726d1"
+    },
+    {
+      "path": "research/assets/datasets.yaml",
+      "bytes": 2553,
+      "sha256": "9833ed3cae622455e9ba9ca2494aa90336bc155db08505e0d36cfbeef686669a"
+    },
+    {
+      "path": "research/assets/infrastructure.yaml",
+      "bytes": 2340,
+      "sha256": "485ebec27ab4160e5a25f9b1a760439a5cdd1cb184880de9c003885e4a9f0c78"
+    },
+    {
+      "path": "research/assets/repositories.yaml",
+      "bytes": 2939,
+      "sha256": "1a19d1de7d6645837d1635411a226cf6139106f4efe3e4c76c4ae3b7a863bcde"
+    },
+    {
+      "path": "research/bibliography/references.bib",
+      "bytes": 5533,
+      "sha256": "8990376a53dc163e63667c66c9951a3f4089e582400b6a454e5e01d9f16293e5"
+    },
+    {
+      "path": "research/corpus/SEED_CORPUS.md",
+      "bytes": 6138,
+      "sha256": "221838afb0445775a8d42c063570cf8f941a00b1e8cd785921afb17898de1dc1"
+    },
+    {
+      "path": "research/corpus/seed-manifest.yaml",
+      "bytes": 1255,
+      "sha256": "3d1800558ef651093614849b11615ae41172bd78645822ff69172aa15183b66b"
+    },
+    {
+      "path": "research/knowledge/connections.csv",
+      "bytes": 3639,
+      "sha256": "f376c13ccd2398c9e79494cb10853a81e273980d0325e071bd142f027af06d55"
+    },
+    {
+      "path": "research/knowledge/edges.jsonl",
+      "bytes": 5375,
+      "sha256": "f60f9680fbd6417fc923ad981eed54eae8e1087478a1441beb1fa9e380d6779c"
+    },
+    {
+      "path": "research/knowledge/nodes.jsonl",
+      "bytes": 15053,
+      "sha256": "24abe6ede1fb0cfe76e425f93db70bded9d19cc105a2bb6c548bff6feecf3e2a"
+    },
+    {
+      "path": "research/reports/DEEP_RESEARCH_SYNTHESIS.md",
+      "bytes": 5174,
+      "sha256": "d1e6515838d4bb020990f5b4519704d8d8ca5fa19cd81ee3cb0a08d4254fa1a7"
+    },
+    {
+      "path": "research/reports/RESEARCH_GAPS.md",
+      "bytes": 1532,
+      "sha256": "afd83761e0ac9256e9898889891695d7cf2365511df4ba4a6bf4319023331f74"
+    },
+    {
+      "path": "research/sources/PROVENANCE.yaml",
+      "bytes": 518,
+      "sha256": "aa86dd8047e53c84cd3890368d40a37e8aeb509071e6c053be4ea1e4f6a1e4f3"
+    },
+    {
+      "path": "research/sources/records/api-crossref.yaml",
+      "bytes": 387,
+      "sha256": "5c2855dfde69730585cf9087eac65258b4430462d20e5a5c8d1e003c6048f54d"
+    },
+    {
+      "path": "research/sources/records/api-openalex.yaml",
+      "bytes": 436,
+      "sha256": "df25e74a4d7e5a6923783555aa2b406e0ed0f6664b9dde99bfc4293eda91ad4d"
+    },
+    {
+      "path": "research/sources/records/api-semanticscholar.yaml",
+      "bytes": 424,
+      "sha256": "8948c5cb8332d1472c37fbc8f322e71703037f7a3308343709d237d12481ca02"
+    },
+    {
+      "path": "research/sources/records/dataset-bigearthnet-txt.yaml",
+      "bytes": 515,
+      "sha256": "f6cc3ef3bdfe37a5065cb3f97ba9db924742a876b8e8298288606c20cc4dfc24"
+    },
+    {
+      "path": "research/sources/records/dataset-bigearthnet.yaml",
+      "bytes": 470,
+      "sha256": "00dc3c7600fd1a16190e2acc766aa4e7060680ebad4c91f935c024abb442344e"
+    },
+    {
+      "path": "research/sources/records/dataset-hls-v2.yaml",
+      "bytes": 545,
+      "sha256": "310458f49565555f222192964ce399d0265405fdd4d0ed8188e45aaeb4a6dbff"
+    },
+    {
+      "path": "research/sources/records/dataset-jrc-gsw-v1-4.yaml",
+      "bytes": 555,
+      "sha256": "ab0a02caa5d70a223f520be2edd59456e03d7c5be6b6227b458651b6ee06ae91"
+    },
+    {
+      "path": "research/sources/records/dataset-landsat-c2-sr.yaml",
+      "bytes": 521,
+      "sha256": "67bcafdff3b486d27ebddeb884ad8274565637b578999194f4c26c4b53d2fbee"
+    },
+    {
+      "path": "research/sources/records/dataset-sentinel2.yaml",
+      "bytes": 566,
+      "sha256": "0616a30a306d78e31959fd0aff4f099f69c60be7538bb1acf6d58a18a2360af9"
+    },
+    {
+      "path": "research/sources/records/dataset-usgs-geothermal.yaml",
+      "bytes": 547,
+      "sha256": "56054242930d9fe427677ea2028960a43f615fcc587018d25c812036b65456d7"
+    },
+    {
+      "path": "research/sources/records/infra-csl.yaml",
+      "bytes": 470,
+      "sha256": "d1a568985280053a480fa2a012cbf7300f160e6e395f15214ece0e6476e9ea29"
+    },
+    {
+      "path": "research/sources/records/infra-networkx.yaml",
+      "bytes": 466,
+      "sha256": "25012642e1be81aa71858cc77b2cd93ad7a438bc0e5b7e7344e7e1834dd2e24f"
+    },
+    {
+      "path": "research/sources/records/infra-pydantic.yaml",
+      "bytes": 455,
+      "sha256": "d193ebe900e9d643c9133025b196789ed00237ff25110de50b36b47dfbdec327"
+    },
+    {
+      "path": "research/sources/records/infra-pyvis.yaml",
+      "bytes": 425,
+      "sha256": "8b4ead742a9c80c140256c2fd8e93c5906619cf735f57ae1b6a56ac6c1e4ebde"
+    },
+    {
+      "path": "research/sources/records/infra-sqlite-fts5.yaml",
+      "bytes": 406,
+      "sha256": "0755fcd9a41968049e60ba3fa95ba91e6ec65934b433b919cf8777dc8c075c84"
+    },
+    {
+      "path": "research/sources/records/paper-geothermal-ai-2022.yaml",
+      "bytes": 672,
+      "sha256": "580282fa740acc6e31f14cecacf6d351ecf76565e424fec5e3f43dd41de4a715"
+    },
+    {
+      "path": "research/sources/records/paper-geothermal-early-ml-2026.yaml",
+      "bytes": 902,
+      "sha256": "cbdd418b11df654bfd489948d5a352f72354b119359db9be8dfa26e11981b051"
+    },
+    {
+      "path": "research/sources/records/paper-geothermal-japan-2026.yaml",
+      "bytes": 927,
+      "sha256": "7e1668d883b8c6250813eb7cd2a8dcb248c686a9fe65df61c129bd95805e49a3"
+    },
+    {
+      "path": "research/sources/records/paper-geothermal-ml-review-2023.yaml",
+      "bytes": 766,
+      "sha256": "5798f446e869f58794512eb3a8a3c7a5dec8e7eda9ce964ea27f4f6b80a8aefe"
+    },
+    {
+      "path": "research/sources/records/paper-geothermal-review-2026.yaml",
+      "bytes": 908,
+      "sha256": "d2c93c9dbafe971562989494268f364449c757d938dfcfeadd5f663de5e29b45"
+    },
+    {
+      "path": "research/sources/records/paper-geothermal-rs-review-2014.yaml",
+      "bytes": 853,
+      "sha256": "336bf27b756eacc8b9ab4b3353ccdfeaf413ff12f72fcc6916e6bfaa1c836c8c"
+    },
+    {
+      "path": "research/sources/records/paper-geothermal-tir-review-2024.yaml",
+      "bytes": 635,
+      "sha256": "0de14e64ff66097b59fac4d4016564bfac11a5a46d09ec2a905008e004220fc9"
+    },
+    {
+      "path": "research/sources/records/paper-groundwater-ml-review-2026.yaml",
+      "bytes": 706,
+      "sha256": "0edab246225c0783c28df99093c3287261734f6c0c66c4f32e34f9f2627cd1c2"
+    },
+    {
+      "path": "research/sources/records/paper-groundwater-validation-review-2024.yaml",
+      "bytes": 798,
+      "sha256": "fa83e58b6b9a62e44c21a4927d1cfaaa74b0d470b174cb435e5e0da403c158a3"
+    },
+    {
+      "path": "research/sources/records/paper-hls-v2-2025.yaml",
+      "bytes": 703,
+      "sha256": "4141c1d92ba5b57269e7faa423620c0b31533807e7a9e9b5182f72e11c714258"
+    },
+    {
+      "path": "research/sources/records/paper-kle-pinn-groundwater-2024.yaml",
+      "bytes": 854,
+      "sha256": "8bb5b2c34d996d3faf29dd0e362e2952fa36bdc064cd270586e076e63f581bfa"
+    },
+    {
+      "path": "research/sources/records/paper-pekel-2016-gsw.yaml",
+      "bytes": 756,
+      "sha256": "61e1ef41ed368e2446351afa42903690a98acd68ff686ebb1c486d7f1c24601c"
+    },
+    {
+      "path": "research/sources/records/paper-prithvi-eo2-2024.yaml",
+      "bytes": 722,
+      "sha256": "fd10e117e38638e4e9920700d1b420c2bc8ba06ca3effb4f7e023d587d1ea4f8"
+    },
+    {
+      "path": "research/sources/records/paper-rsfm-survey-2025.yaml",
+      "bytes": 743,
+      "sha256": "af041c15e123a46904ac106971f576f13e93111aa992a06e7475f409f08db373"
+    },
+    {
+      "path": "research/sources/records/paper-satmae-2022.yaml",
+      "bytes": 759,
+      "sha256": "0cd6948f0cf5458484d2c96a07f1ea96f1b72691aeb3e4b6752c004866cee23f"
+    },
+    {
+      "path": "research/sources/records/paper-terramind-2025.yaml",
+      "bytes": 699,
+      "sha256": "d66f895422b86a69465997c7c9cba5fa52965c457ed6f0c9c7ad710a7d768602"
+    },
+    {
+      "path": "research/sources/records/paper-vfm-rs-survey-2024.yaml",
+      "bytes": 622,
+      "sha256": "ef8e12c32a2fb5a1fb353559b416fdb463c0debf0143e14e08beca71f3ece493"
+    },
+    {
+      "path": "research/sources/records/repo-clay.yaml",
+      "bytes": 487,
+      "sha256": "e49532a77a397ac472a92c9bafb32ea3d18c89f2b9cadf59e6457922d59d3381"
+    },
+    {
+      "path": "research/sources/records/repo-dofa.yaml",
+      "bytes": 495,
+      "sha256": "6955b2944c6f71467d18f1487ee7bfeebaa2f0cb261570e256bd83d244031fb2"
+    },
+    {
+      "path": "research/sources/records/repo-prithvi-eo2.yaml",
+      "bytes": 445,
+      "sha256": "b97a6834f322efe6e29dff3a128867b767dcf2db87df7418c97bb9167285a562"
+    },
+    {
+      "path": "research/sources/records/repo-samgeo.yaml",
+      "bytes": 523,
+      "sha256": "d79c7f62ff1413de558fc6ce701a38f860a8ddea962216bdce33643fefdb7edd"
+    },
+    {
+      "path": "research/sources/records/repo-satlas-models.yaml",
+      "bytes": 448,
+      "sha256": "780443244e5eb56da48685703a5494d89204544cb5fe961f0047bd21b082e147"
+    },
+    {
+      "path": "research/sources/records/repo-satlas.yaml",
+      "bytes": 413,
+      "sha256": "3a6ab95b8c8127c12e19320aaf33c15f0c1c4b2a332c745c542249ed0c2c2839"
+    },
+    {
+      "path": "research/sources/records/repo-satmae.yaml",
+      "bytes": 424,
+      "sha256": "e844a43c84a37f6b8aa0744c9ac901bc7fb31e70702b9096fdf890129504b5f2"
+    },
+    {
+      "path": "research/sources/records/repo-terramind.yaml",
+      "bytes": 425,
+      "sha256": "5e2a0327861cceb66e7717bfbe41040a5e9e4c5b8bac873b6b3659b3e4c58e80"
+    },
+    {
+      "path": "research/sources/records/repo-terratorch.yaml",
+      "bytes": 519,
+      "sha256": "3de52452dbd6a0ecebecb64f706dc3f2e72bc26a5b7f3760912ccf00cfebd02d"
+    },
+    {
+      "path": "research/sources/records/repo-torchgeo.yaml",
+      "bytes": 472,
+      "sha256": "26a33f6cdd81e114f75dce3bea972876ac1e5d28d8ba424ecc8946808e7feeb3"
+    },
+    {
+      "path": "research/sources/source_catalog.csv",
+      "bytes": 18733,
+      "sha256": "55123e94e3f4b1c248515139bf4bbc5cb8bfce443f552a30b777972c9605abda"
+    },
+    {
+      "path": "research/sources/source_catalog.jsonl",
+      "bytes": 27797,
+      "sha256": "c25891140ba048fc304b67d146765224f33ba4efe3e9c597892954b0a7f5fbf3"
+    },
+    {
+      "path": "sdd_context/CURRENT_DESIGN_AND_SESSION_OUTPUT.txt",
+      "bytes": 29887,
+      "sha256": "96b04d39b523e68a97ed2a91650b721ec6b0fb869baed4d09472b2cbfcd38bad"
+    },
+    {
+      "path": "sdd_context/SDD_IMPORT_PROMPT.md",
+      "bytes": 1187,
+      "sha256": "c346d63d4996a0a9cfa15dd4ccc6068c6f7c5342be335b231c356701361344de"
+    }
+  ]
+}

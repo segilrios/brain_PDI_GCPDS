@@ -1,0 +1,28 @@
+id: paper-geothermal-early-ml-2026
+kind: paper
+title: 'Early-phase geothermal prospecting using remote sensing and machine learning: application to Buharkent and Germencik
+  fields, Türkiye'
+authors:
+- Hakan Oktay Aydınlı
+- Gordana Kaplan
+- Saye Nihan Çabuk
+year: 2026
+role:
+- application
+- state_of_the_art
+domains:
+- geothermal
+- remote_sensing
+- machine_learning
+doi: 10.1016/j.geothermics.2026.103603
+url: https://www.sciencedirect.com/science/article/abs/pii/S0375650526000088
+access: publisher_page
+importance: Recent application using LST, lineament density, hydrothermal alteration, K-means and Random Forest in mature
+  geothermal fields.
+connections:
+- concept-lst
+- concept-lineaments
+- concept-hydrothermal-alteration
+- concept-geothermal-prospectivity
+evidence_note: Supports remote sensing as an early exploration/support tool, not standalone reservoir proof.
+link_category: academic

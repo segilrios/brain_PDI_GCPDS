@@ -1,0 +1,39 @@
+generated: '2026-08-30'
+status: candidate_seed_corpus_for_human_review
+principle: Seeds anchor relevance, not truth. Human curator must approve/promote scientific claims.
+seed_ids:
+- paper-pekel-2016-gsw
+- paper-groundwater-validation-review-2024
+- paper-groundwater-ml-review-2026
+- paper-kle-pinn-groundwater-2024
+- paper-geothermal-rs-review-2014
+- paper-geothermal-ml-review-2023
+- paper-geothermal-review-2026
+- paper-geothermal-tir-review-2024
+- paper-prithvi-eo2-2024
+- paper-terramind-2025
+- paper-satmae-2022
+- paper-rsfm-survey-2025
+- paper-hls-v2-2025
+- repo-prithvi-eo2
+- repo-terramind
+- repo-terratorch
+- repo-torchgeo
+- dataset-jrc-gsw-v1-4
+- dataset-hls-v2
+- dataset-usgs-geothermal
+admission_states:
+- human_seed
+- verified_expansion
+- candidate
+recommended_expansion:
+- backward citations from seminal/review papers
+- forward citations to current work
+- datasets and official repositories linked to accepted sources
+- contradictory evidence for existing claims
+- recent work directly tied to accepted concepts
+bounds:
+- Do not recursively expand unverified candidates
+- Log parent/query/date/cap/admission decision
+- Prefer primary/official sources and high-quality reviews
+- Require provenance and locator before source_verified claims

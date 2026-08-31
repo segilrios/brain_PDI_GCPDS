@@ -1,0 +1,23 @@
+id: paper-geothermal-ai-2022
+kind: paper
+title: The Geothermal Artificial Intelligence for geothermal exploration
+authors: []
+year: 2022
+role:
+- methodological
+- application
+domains:
+- geothermal
+- ai
+- remote_sensing
+- geophysics
+doi: 10.1016/j.renene.2022.04.113
+url: https://www.sciencedirect.com/science/article/pii/S096014812200581X
+access: publisher_page
+importance: Integrates geological/geophysical information and remote-sensing indicators in an AI geothermal exploration framework.
+connections:
+- concept-geothermal-prospectivity
+- concept-machine-learning
+- concept-geophysics
+evidence_note: Representative hybrid data-fusion direction.
+link_category: academic

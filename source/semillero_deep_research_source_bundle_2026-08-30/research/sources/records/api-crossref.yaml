@@ -1,0 +1,20 @@
+id: api-crossref
+kind: api
+title: Crossref REST API
+authors:
+- Crossref
+year: 2026
+role:
+- metadata_api
+domains:
+- bibliography
+- doi
+url: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+access: public_api
+importance: Canonical DOI metadata retrieval and normalization.
+connections:
+- api-openalex
+- infra-csl
+link_category: infrastructure
+doi: null
+evidence_note: ''

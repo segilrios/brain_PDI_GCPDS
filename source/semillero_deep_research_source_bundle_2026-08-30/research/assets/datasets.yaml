@@ -1,0 +1,71 @@
+- id: dataset-jrc-gsw-v1-4
+  title: JRC Global Surface Water Mapping Layers v1.4
+  url: https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_GlobalSurfaceWater
+  year: 2021
+  access: open_data
+  importance: Global 30 m surface-water occurrence/change layers derived from 4.7M+ Landsat scenes through 2021.
+  domains:
+  - surface_water
+  - earth_observation
+- id: dataset-hls-v2
+  title: Harmonized Landsat and Sentinel-2 v2.0 (HLS)
+  url: https://hls.gsfc.nasa.gov/data-access-and-tools/
+  year: 2025
+  access: open_data
+  importance: Analysis-ready harmonized Landsat/Sentinel-2 surface reflectance with frequent revisit; core pretraining source
+    for Prithvi-EO-2.0.
+  domains:
+  - earth_observation
+  - surface_reflectance
+  - multitemporal
+- id: dataset-landsat-c2-sr
+  title: Landsat Collection 2 Surface Reflectance
+  url: https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-reflectance
+  year: 2020
+  access: open_data
+  importance: Core 30 m analysis-ready optical record used broadly for long-term surface-water and geothermal studies.
+  domains:
+  - earth_observation
+  - surface_reflectance
+- id: dataset-sentinel2
+  title: Copernicus Sentinel-2 MSI products
+  url: https://sentinels.copernicus.eu/sentinel-data-access/sentinel-products/sentinel-2-data-products
+  year: 2025
+  access: open_data
+  importance: 10–60 m multispectral data with Level-1C/Level-2A products; central optical source for water, alteration and
+    EO FM research.
+  domains:
+  - earth_observation
+  - multispectral
+- id: dataset-bigearthnet
+  title: BigEarthNet v2.0
+  url: https://bigearth.net/
+  year: 2025
+  access: open_data
+  importance: Large-scale Sentinel-1/Sentinel-2 benchmark with current v2.0 releases; useful for multimodal EO representation
+    learning.
+  domains:
+  - earth_observation
+  - multimodal
+  - classification
+- id: dataset-bigearthnet-txt
+  title: BigEarthNet.txt
+  url: https://txt.bigearth.net/
+  year: 2026
+  access: open_data
+  importance: '2026 multi-sensor image-text benchmark: ~464k co-registered S1/S2 images and ~9.6M S1-S2-text triplets.'
+  domains:
+  - earth_observation
+  - multimodal
+  - vision_language
+- id: dataset-usgs-geothermal
+  title: USGS Geothermal Data Releases
+  url: https://www.usgs.gov/search?f%5B0%5D=usgs_facet%3Aproducts_data&keywords=Geothermal
+  year: 2026
+  access: open_data
+  importance: Official geothermal data releases including magnetotellurics, resource favorability and geochemical/hydrologic
+    data.
+  domains:
+  - geothermal
+  - geophysics
+  - geochemistry

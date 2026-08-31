@@ -1,0 +1,31 @@
+id: paper-geothermal-review-2026
+kind: paper
+title: 'Review on geothermal prospectivity mapping: Global trends, challenges, and future directions'
+authors:
+- Ahmad Ibrahim Aliyu
+- Haylay Tsegab Gebretsadik
+- James Olosegbuwa Egbokhare
+- Mushtaq Ahmad
+- Abdulrasheed Ibrahim Yerima
+- Asmau Iyabo Balogun
+year: 2026
+role:
+- review
+- state_of_the_art
+domains:
+- geothermal
+- machine_learning
+- xai
+- uncertainty
+doi: 10.1016/j.rser.2026.117164
+url: https://www.sciencedirect.com/science/article/pii/S1364032126004636
+access: publisher_page
+importance: Current global review (~100 studies); highlights hybrid expert+statistical+ensemble approaches, XAI and uncertainty
+  as frontier issues.
+connections:
+- paper-geothermal-ml-review-2023
+- concept-xai
+- concept-uncertainty
+- concept-geothermal-prospectivity
+evidence_note: Strong frontier anchor for research gaps and validation design.
+link_category: academic

@@ -1,0 +1,18 @@
+id: infra-networkx
+kind: documentation
+title: NetworkX MultiDiGraph documentation
+authors:
+- NetworkX project
+year: 2026
+role:
+- implementation
+domains:
+- knowledge_graph
+url: https://networkx.org/documentation/stable/reference/classes/index.html
+access: open_docs
+importance: Supports directed graphs with parallel edges, matching qualified scientific relations in the V1 design.
+connections:
+- infra-pyvis
+link_category: infrastructure
+doi: null
+evidence_note: ''

@@ -1,0 +1,19 @@
+id: infra-pyvis
+kind: documentation
+title: PyVis documentation
+authors:
+- PyVis project
+year: 2026
+role:
+- implementation
+domains:
+- knowledge_graph
+- visualization
+url: https://pyvis.readthedocs.io/en/latest/
+access: open_docs
+importance: Interactive HTML network visualization with NetworkX integration; suitable as a derived V1 view.
+connections:
+- infra-networkx
+link_category: infrastructure
+doi: null
+evidence_note: ''

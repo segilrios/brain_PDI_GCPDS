@@ -1,0 +1,23 @@
+id: dataset-bigearthnet
+kind: dataset
+title: BigEarthNet v2.0
+authors:
+- BigEarthNet team
+year: 2025
+role:
+- benchmark
+- dataset
+domains:
+- earth_observation
+- multimodal
+- classification
+url: https://bigearth.net/
+access: open_data
+importance: Large-scale Sentinel-1/Sentinel-2 benchmark with current v2.0 releases; useful for multimodal EO representation
+  learning.
+connections:
+- repo-torchgeo
+- dataset-sentinel2
+link_category: datasets
+doi: null
+evidence_note: ''

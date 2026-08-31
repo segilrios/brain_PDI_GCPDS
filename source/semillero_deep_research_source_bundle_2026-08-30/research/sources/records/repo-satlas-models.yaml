@@ -1,0 +1,20 @@
+id: repo-satlas-models
+kind: repository
+title: allenai/satlaspretrain_models
+authors:
+- Allen Institute for AI
+year: 2023
+role:
+- implementation
+- foundation_model
+domains:
+- earth_observation
+- foundation_models
+url: https://github.com/allenai/satlaspretrain_models
+access: open_source
+importance: Pretrained models for Sentinel-1/2, Landsat and aerial imagery.
+connections:
+- repo-satlas
+link_category: implementation
+doi: null
+evidence_note: ''

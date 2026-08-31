@@ -1,0 +1,385 @@
+ Called engram.mem_review({"action":"list","project":"semillero"})
+  └ {"observations": [], "project": "semillero", "project_path": "", "project_source": "explicit_override", "result":
+        "No memories need review."}
+
+• Calling engram.mem_context({"project":"semillero","scope":"project"})
+
+• Called
+  └ engram.mem_search({"project":"semillero","query":"local-first-research-knowledge-base proposal spec approval
+        clarifications design"})
+    {"project": "semillero", "project_path": "", "project_source": "explicit_override", "result": "No memories found
+        for: \"local-first-research-knowledge-base proposal spec approval clarifications design\""}
+
+• Called engram.mem_context({"project":"semillero","scope":"project"})
+  └ {"project": "semillero", "project_path": "", "project_source": "explicit_override", "result": "## Memory from
+        Previous Sessions\n\n### Recent Sessions\n- **semillero** (2026-08-30 16:32:48) [14 observations]\n-
+        **semillero** (2026-08-30 15:49:52) [17 observations]\n\n### Recent User Prompts\n- 2026-08-30 16:32:51: Read-
+        only scientific exploration: propose a minimal typed scientific knowledge-graph ontology for Earth Observation
+        research on surface water and geothermal prospecting, grounded in authoritative web ...\n- 2026-08-30 16:32:48:
+        You are already the delegate...
+
+• Calling engram.mem_get_observation({"id":1})
+
+• Calling engram.mem_get_observation({"id":22})
+
+• Calling engram.mem_get_observation({"id":19})
+
+• Calling engram.mem_get_observation({"id":24})
+
+• Calling engram.mem_get_observation({"id":28})
+
+• Calling engram.mem_get_observation({"id":29})
+
+• Called engram.mem_get_observation({"id":1})
+  └ {"project": "semillero", "project_path": "C:/Users/gilse/OneDrive/Escritorio/Semillero", "project_source":
+        "git_root", "result": "#1 [architecture] sdd-init/semillero\n## SDD Project Context\n\n**Project**:
+        semillero\n**Project path**: C:/Users/gilse/OneDrive/Escritorio/Semillero\n**Persistence mode**:
+        engram\n**Detected**: 2026-08-30\n\n### Stack and Repository State\n\n- Stack: undetected; repository contains
+        no application source or package manifest.\n- Repository state: Git repository initialized on branch `master`,
+        with no commits; only `.gitignore` is currentl...
+
+• Called engram.mem_get_observation({"id":19})
+  └ {"project": "semillero", "project_path": "C:/Users/gilse/OneDrive/Escritorio/Semillero", "project_source":
+        "git_root", "result": "#19 [architecture] Explored EO resource prospecting knowledge graph\n**What**: Completed
+        and persisted the standalone SDD exploration for an agent-assisted Earth Observation natural-resource
+        prospecting knowledge graph.\n**Why**: Define a scientifically rigorous, claim-centered architecture before
+        proposal or implementation choices.\n**Where**: Engram topic `sdd/explore/earth-observation-resource-
+        prospecting-knowledge-graph`; no repositor...
+
+• Called engram.mem_get_observation({"id":24})
+  └ {"project": "semillero", "project_path": "C:/Users/gilse/OneDrive/Escritorio/Semillero", "project_source":
+        "git_root", "result": "#24 [architecture] Proposed local-first research knowledge base\n# Proposal: Local-First
+        Research Knowledge Base\n\n## Intent\nCreate an auditable, local-first scientific knowledge base where Git—not
+        Engram—preserves scientific knowledge. Reuse explorations #19/#22: their claim-centered semantic firewall and
+        confirmed separation of operational memory from durable artifacts.\n\n## Scope\n### In Scope\n- Define contracts
+        for versioned bibli...
+
+• Called engram.mem_get_observation({"id":28})
+  └ {"project": "semillero", "project_path": "C:/Users/gilse/OneDrive/Escritorio/Semillero", "project_source":
+        "git_root", "result": "#28 [architecture] sdd/local-first-research-knowledge-base/spec\n# Local-First Research
+        Knowledge Base Specification\n\n## Purpose\nSpecify an auditable, implementation-neutral model: Engram is
+        operational memory/SDD state, Git stores durable scientific artifacts, and local/external storage stores
+        referenced assets by URI/path, version, and checksum.\n\n## Requirements\n\n### Requirement: Typed artifact
+        contracts\nThe system MUST validate...
+
+• Called engram.mem_get_observation({"id":22})
+  └ {"project": "semillero", "project_path": "C:/Users/gilse/OneDrive/Escritorio/Semillero", "project_source":
+        "git_root", "result": "#22 [discovery] Clarify exploration artifact storage\nWhat: Confirmed the EO exploration
+        persisted summaries, decisions, links, and ontology design in Engram but did not download or store papers,
+        datasets, or a knowledge graph locally. Why: Clarify what the user can inspect after the exploration. Where:
+        Engram observations #19 and related session memories; repository currently contains only AGENTS.md, .atl/skill-
+        registry.md, .gitignore, a...
+
+• Called engram.mem_get_observation({"id":29})
+  └ {"project": "semillero", "project_path": "C:/Users/gilse/OneDrive/Escritorio/Semillero", "project_source":
+        "git_root", "result": "#29 [decision] Approved SDD specification for research knowledge base\n**What**: Human
+        approval recorded for the SPEC of `local-first-research-knowledge-base`; SDD state is now SPEC approved, with
+        DESIGN as the next pending phase.\n**Why**: The user explicitly approved the SPEC and supplied five
+        clarifications to resolve during DESIGN without changing the SPEC now.\n**Where**: Engram SDD state topic `sdd/
+        local-first-research-knowledge-bas...
+
+• Ran Get-Content -Raw 'C:\Users\gilse\.codex\skills\sdd-design\SKILL.md'; "`n---AGENTS---`n"; Get-Content -Raw '.
+  │ \AGENTS.md'; "`n---REGISTRY---`n"; Get-Content -Raw '.\.atl\skill-registry.md'
+  └ ---
+    name: sdd-design
+    … +301 lines (ctrl + t to view transcript)
+    4. If no matching skill exists, proceed without project skill injection and report `skill_resolution: none`.
+
+
+• Spawned 01a054d0-7f94-76f1-87f8-7ef15541d051 (gpt-5.6-sol medium)
+  └ You are the dedicated sdd-design sub-agent. Do not delegate. Complete ONLY the DESIGN phase for change local-first-
+  research-knowledge-base.
+  Artifact store: ...
+
+• Waiting for 01a054d0-7f94-76f1-87f8-7ef15541d051
+
+• Finished waiting
+  └ 01a054d0-7f94-76f1-87f8-7ef15541d051: Completed - - **status:** success - **executive_summary:** Designed a
+  functional local-first V1 using Python, typed schemas, Git-versioned YAML records, NetworkX, derived FTS5 search, and
+  interactive HTML. The design covers both the graph engine and...
+
+• Called engram.mem_get_observation({"id":32})
+  └ {"project": "semillero", "project_path": "C:/Users/gilse/OneDrive/Escritorio/Semillero", "project_source":
+        "git_root", "result": "#32 [architecture] sdd/local-first-research-knowledge-base/design\n# Design: Local-First
+        Research Knowledge Base\n\n## Technical Approach\nBuild a Python CLI to validate Git records, derive a
+        multigraph/search index, and export HTML. Engram holds SDD only; Git is scientific truth; external assets are
+        immutable references.\n\n`curate → validate → promote → build graph/index → query/export`\n\n## Architecture and
+        Repository Structure\n```te...
+
+• Called
+  └ engram.mem_save({"title":"Designed functional V1 research knowledge
+        base","type":"architecture","project":"semillero","topic_key":"sdd/local-first-research-knowledge-base/design-
+        status","content":"**What**: Completed and persisted the DESIGN for a functional local-first V1 with a Python/
+        Pydantic/YAML/NetworkX/SQLite FTS5/PyVis architecture and a populated seed-corpus plan.\n**Why**: Translate the
+        approved SPEC and human clarifications into implementable technical choices while preserving provenance,
+        epistemic safeguards, domain separation, and reproducibility.\n**Where**: Engram topic `sdd/local-first-
+        research-knowledge-base/design` (observation #32); no repository changes.\n**Learned**: V1 must be populated,
+        not empty infrastructure: APPLY completion requires reviewed records across all three EO lines and foundations,
+        typed claims, contradiction evidence, a multi-result experiment, version-bound external references, provenance/
+        search queries, and interactive HTML. Human approval remains needed for guide papers, curation authority,
+        confidence scale, access/excerpt policy, and seed counts."})
+    {"candidates": [{"id": 29, "judgment_id": "rel-1182f8fea600e806", "score": -1.5636698135317944, "sync_id": "obs-
+        49117b9d10fbbe67", "title": "Approved SDD specification for research knowledge base", "topic_key": "sdd/local-
+        first-research-knowledge-base/spec-status", "type": "decision"}, {"id": 27, "judgment_id": "rel-
+        3b8e078cacd56760", "score": -1.5040453387955441, "sync_id": "obs-5762e1f6288bbe2e", "title": "Session summary:
+        semillero", "type": "session_summary"}, {"id": 31, "judgment_id": "rel-def3d6d9839d08b7", "score":
+        -1.4776008317760283, "sync_id": "obs-ea8e6dd...
+
+• Called
+  └ engram.mem_judge({"judgment_id":"rel-3b8e078cacd56760","relation":"not_conflict","reason":"The earlier session
+        summary is historical context and does not conflict with the DESIGN.","confidence":0.99})
+    {"relation": {"id": 30, "sync_id": "rel-3b8e078cacd56760", "source_id": "obs-39e8c22fa5dbc174", "target_id": "obs-
+        5762e1f6288bbe2e", "relation": "not_conflict", "reason": "The earlier session summary is historical context and
+        does not conflict with the DESIGN.", "confidence": 0.99, "judgment_status": "judged", "marked_by_actor":
+        "agent", "marked_by_kind": "agent", "created_at": "2026-08-30 22:38:04", "updated_at": "2026-08-30 22:38:08"}}
+
+• Called
+  └ engram.mem_judge({"judgment_id":"rel-1182f8fea600e806","relation":"related","reason":"The DESIGN operationalizes the
+        approved SPEC without replacing it.","confidence":0.99})
+    {"relation": {"id": 29, "sync_id": "rel-1182f8fea600e806", "source_id": "obs-39e8c22fa5dbc174", "target_id": "obs-
+        49117b9d10fbbe67", "relation": "related", "reason": "The DESIGN operationalizes the approved SPEC without
+        replacing it.", "confidence": 0.99, "judgment_status": "judged", "marked_by_actor": "agent", "marked_by_kind":
+        "agent", "created_at": "2026-08-30 22:38:04", "updated_at": "2026-08-30 22:38:08"}}
+
+• Called
+  └ engram.mem_judge({"judgment_id":"rel-def3d6d9839d08b7","relation":"not_conflict","reason":"The prior session summary
+        is historical context and does not conflict with the DESIGN.","confidence":0.99})
+    {"relation": {"id": 31, "sync_id": "rel-def3d6d9839d08b7", "source_id": "obs-39e8c22fa5dbc174", "target_id": "obs-
+        ea8e6dde1036cdca", "relation": "not_conflict", "reason": "The prior session summary is historical context and
+        does not conflict with the DESIGN.", "confidence": 0.99, "judgment_status": "judged", "marked_by_actor":
+        "agent", "marked_by_kind": "agent", "created_at": "2026-08-30 22:38:04", "updated_at": "2026-08-30 22:38:08"}}
+
+• Called
+  └ engram.mem_session_summary({"project":"semillero","content":"## Goal\nCreate the DESIGN for the approved `local-
+        first-research-knowledge-base` SDD change, using Engram only, and stop before TASKS.\n\n## Instructions\n-
+        Retrieve proposal, SPEC, EO exploration, storage clarification, human post-SPEC clarifications, AGENTS.md, and
+        skill registry.\n- Use fresh delegated design context and relevant skills.\n- Do not implement, create files/
+        folders, install, download, clone, build the graph, commit, or advance to TASKS.\n- Technical artifact language:
+        concise professional English; user-facing reply in Spanish.\n\n## Discoveries\n- Repository is intentionally
+        empty; no existing code, dependency, or test patterns constrain the design.\n- The design selects a populated V1
+        architecture: Python 3.12, Pydantic v2/JSON Schema, per-record YAML in Git, NetworkX MultiDiGraph, SQLite FTS5,
+        CSL-JSON, manifests for external assets, PyVis HTML, and pytest.\n- Human clarifications are addressed:
+        Experiment/Result are distinct one-to-many entities; Claim has canonical statement plus reviewed optional SPO;
+        locators are a tagged source-independent union; lifecycle replaces hard deletion; confidence and
+        verification_status are independent.\n- APPLY must populate all three EO lines and foundations, with typed
+        claims, contradiction evidence, a multi-result experiment, version-bound external references, provenance/search
+        queries, and interactive HTML.\n- Human approval remains needed for guide papers, curation authority, confidence
+        scale, access/excerpt policy, and final seed counts.\n\n## Accomplished\n- ✅ Delegated DESIGN to the dedicated
+        fresh-context sdd-design worker with resolved skills.\n- ✅ Gatekeeper read back and verified Engram observation
+        #32 at `sdd/local-first-research-knowledge-base/design`.\n- ✅ Persisted a design status architecture
+        observation and updated SDD state conceptually to DESIGN complete / TASKS pending.\n- ✅ No repository changes
+        or implementation actions.\n\n## Next Steps\n- Await human approval of the DESIGN. Do not launch TASKS without
+        explicit approval.\n\n## Relevant Files\n- Engram `sdd/local-first-research-knowledge-base/proposal` — approved
+        proposal.\n- Engram `sdd/local-first-research-knowledge-base/spec` — approved SPEC.\n- Engram `sdd/explore/
+        earth-observation-resource-prospecting-knowledge-graph` — prior exploration.\n- Engram `sdd/local-first-
+        research-knowledge-base/spec-status` — human clarifications.\n- Engram `sdd/local-first-research-knowledge-base/
+        design` — completed DESIGN, observation #32.\n- AGENTS.md — repository operating contract."})
+    {"project": "semillero", "project_path": "", "project_source": "explicit_override", "result": "Session summary saved
+        for project \"semillero\"\nSession activity: 10 tool calls, 0 saves — high activity with no saves, consider
+        persisting important decisions"}
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+• DESIGN completado, revisado contra la proposal, SPEC y aclaraciones humanas, y persistido en Engram:
+
+   sdd/local-first-research-knowledge-base/design
+
+  Observación: #32.
+  No se crearon archivos, código, dependencias, datos ni commits. No se avanzó a TASKS.
+
+  # Design: Local-First Research Knowledge Base
+
+  ## Technical Approach
+
+  Build a Python CLI to validate Git records, derive a multigraph/search index, and export HTML. Engram holds SDD only;
+  Git is scientific truth; external assets are immutable references.
+
+  curate → validate → promote → build graph/index → query/export
+
+  ## Architecture and Repository Structure
+
+  pyproject.toml
+  src/semillero_kb/{cli,models,validation,ingest,curation,graph,search,visualization}.py
+  schemas/{records,relations,locators}.json
+  research/
+    sources/{records/,bibliography.csl.json}
+    claims/{records/,evidence/}
+    graph/{entities/,relations/}
+    experiments/{experiments/,results/}
+    corpus/{seed-manifest.yaml,expansion-log.yaml}
+    assets/{datasets.yaml,repositories.yaml,external.yaml}
+    taxonomy/{domains.yaml,roles.yaml,relations.yaml}
+  build/{graph.json,search.sqlite,index.html}
+  tests/{unit,integration,fixtures,acceptance}/
+
+  build/ is reproducible and ignored; research/ is canonical, with one YAML record per stable ID.
+
+  ## Data Contracts
+
+   Contract             Constraints
+  ━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Common               Stable ID, provenance, version, lifecycle=active|deprecated|superseded|retracted; no hard
+                        delete; transitions retain predecessor, reason, date, and actor.
+  ───────────────────  ─────────────────────────────────────────────────────────────────────────────────────────────────
+   Claim                Canonical statement required; optional SPO is a normalized index projection. Mismatch blocks
+                        promotion. assertion_type, confidence, and verification_status are independent.
+  ───────────────────  ─────────────────────────────────────────────────────────────────────────────────────────────────
+   EvidenceLocator      Tagged union: pdf_page_section, heading_anchor, timestamp, git_lines, dataset_record,
+                        figure_table_equation, uri_fragment; each kind has required coordinates.
+  ───────────────────  ─────────────────────────────────────────────────────────────────────────────────────────────────
+   Experiment/Result    Separate IDs. Experiment defines hypothesis, inputs, code, environment, parameters, seeds, and
+                        planned metrics. One Experiment has 1..N Results.
+  ───────────────────  ─────────────────────────────────────────────────────────────────────────────────────────────────
+   Graph                Typed nodes and directed, qualified relations with provenance, lifecycle, contradiction, and
+                        version support.
+
+  ## Seed Scientific Corpus
+
+  Seeds require seed=true, source_role, domain, provenance, verification status, and admission state:
+
+  human_seed | verified_expansion | candidate.
+
+  Roles:
+
+  foundational, seminal, review, methodological, application, benchmark, state_of_the_art, contradictory_evidence,
+  supporting.
+
+  Guide papers anchor relevance, not truth. Expansion is admitted only after identity, scope, locator, access/license,
+  and relevance checks.
+
+  The three domains remain separate:
+
+  - Surface water.
+  - Groundwater potential.
+  - Geothermal prospectivity.
+
+  Shared foundations include EO, remote sensing, GIS, image processing, geology, hydrogeology, geophysics, probability,
+  statistics, optimization, PDEs, fluid flow, heat transfer, ML, DL, CNNs, transformers, PINNs, and EO foundation
+  models.
+
+  ## Ingestion, Expansion, and Verification
+
+  1. Register manual or guide metadata as candidate.
+  2. Deduplicate using persistent ID plus version.
+  3. Validate structure, identity, access, license, checksum, and domain firewall.
+  4. Curator inspects the source and typed locator.
+  5. Record assessment; candidates cannot self-promote.
+  6. Expand only bounded batches from citations, citing works, reviews, related groups, datasets, repositories, or
+     recent work linked to existing claims/concepts.
+
+  7. Log parent, query, date, cap, and decision.
+  8. Never expand unverified candidates.
+  9. Build graph, search index, and HTML from canonical records.
+
+  ## Search, Visualization, Experiments, and Assets
+
+  SQLite FTS5 indexes titles, statements, IDs, domains, roles, and lifecycle. Queries return neighbors, provenance,
+  contradictions, and subgraphs.
+
+  PyVis exports self-contained HTML with zoom, search, filters, colors, centrality/role sizing, and navigation to
+  papers, datasets, repositories, foundations, state-of-the-art records, and gaps.
+
+  Assets and repositories store URI, version/tag/commit, acquisition date, license, availability, optional local path,
+  and checksum. V1 never downloads or clones automatically.
+
+  Experiment manifests reconstruct inputs → results → claims and preserve positive, negative, inconclusive, and failed
+  outcomes.
+
+  ## Technology Decisions
+
+   Area                          Choice and rationale                         Rejected/trade-off
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Language/models/validation    Python 3.12 + Pydantic v2; JSON Schema       TypeScript adds no V1 value; dataclasses
+                                 provides portable contracts.                 lack validation.
+  ────────────────────────────  ───────────────────────────────────────────  ───────────────────────────────────────────
+   Format/graph                  Per-record YAML + NetworkX MultiDiGraph;     JSON is noisier; RDF/Neo4j add burden.
+                                 supports Git diffs and qualified parallel
+                                 edges.
+  ────────────────────────────  ───────────────────────────────────────────  ───────────────────────────────────────────
+   Search                        Derived SQLite FTS5; local,                  Grep is weak; vector DB is premature.
+                                 deterministic, rebuildable.
+  ────────────────────────────  ───────────────────────────────────────────  ───────────────────────────────────────────
+   Bibliography                  Generated CSL-JSON; interoperable and        BibTeX loses metadata; Zotero remains
+                                 single-source.                               optional.
+  ────────────────────────────  ───────────────────────────────────────────  ───────────────────────────────────────────
+   Assets/repos                  Versioned/checksummed manifests.             DVC, LFS, object storage, and cloning are
+                                                                              premature.
+  ────────────────────────────  ───────────────────────────────────────────  ───────────────────────────────────────────
+   Visualization                 PyVis HTML from graph build.                 D3 costs more; static images lack
+                                                                              interaction.
+  ────────────────────────────  ───────────────────────────────────────────  ───────────────────────────────────────────
+   Testing                       pytest with schema, property,                Snapshot-only tests miss epistemic
+                                 integration, acceptance, and HTML checks.    invariants.
+  ────────────────────────────  ───────────────────────────────────────────  ───────────────────────────────────────────
+   Pipeline                      Staged CLI with fail-closed promotion.       Automated API/LLM ingestion risks
+                                                                              contamination.
+
+  ## Testing Strategy
+
+  Tests cover:
+
+  - lifecycle transitions;
+  - Claim/SPO consistency;
+  - typed locators;
+  - independent confidence and verification;
+  - domain firewall;
+  - multiple Results per Experiment;
+  - contradictions;
+  - reverse provenance;
+  - expansion bounds;
+  - deterministic indexes;
+  - search queries;
+  - HTML controls.
+
+  Threat Matrix: N/A — no routing, shell, subprocess, VCS/PR automation, executable classification, or process-
+  integration boundary.
+
+  ## SPEC Mapping
+
+   SPEC requirement                   Design component
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Typed contracts                    Pydantic/JSON Schema + YAML records
+  ─────────────────────────────────  ────────────────────────────────────────────────────────────────────
+   Epistemic safety                   Fail-closed promotion, independent fields, contradiction retention
+  ─────────────────────────────────  ────────────────────────────────────────────────────────────────────
+   Graph/provenance                   MultiDiGraph + typed evidence and reverse paths
+  ─────────────────────────────────  ────────────────────────────────────────────────────────────────────
+   Domain firewall/reproducibility    Domain validators + Experiment/Result manifests
+  ─────────────────────────────────  ────────────────────────────────────────────────────────────────────
+   External references                Asset and repository manifests
+
+  ## APPLY Completion Criterion
+
+  APPLY is complete only when tests pass and V1 contains reviewed records spanning all three EO lines and their
+  foundations, including:
+
+  - at least one typed-locator Claim per line;
+  - one preserved contradiction;
+  - one Experiment with multiple Results;
+  - one version-bound Dataset;
+  - one repository reference with commit/tag;
+  - working forward and reverse provenance queries;
+  - working search;
+  - an interactive HTML view.
+
+  Counts and consulted sources must be reported honestly.
+
+  ## Open Questions Requiring Human Approval
+
+  Before APPLY:
+
+  - guide papers;
+  - curation authority;
+  - confidence scale;
+  - access and excerpt policy;
+  - final seed counts.
+
+  DESIGN remains complete. La siguiente fase es TASKS, pero no la iniciaré sin tu aprobación humana.
+
+  ## Key Learnings:
+
+  1. La V1 será un sistema poblado y consultable, no infraestructura vacía.
+  2. Git conserva los registros científicos canónicos; índices y visualizaciones son derivados reproducibles.
+  3. Experiment y Result son entidades distintas con relación uno-a-muchos.
+  4. La expansión bibliográfica queda limitada por lotes, criterios de admisión y estados de verificación.
+  5. Persisten decisiones humanas pendientes sobre corpus inicial, curación, confianza, licencias y acceso.

@@ -1,0 +1,27 @@
+id: paper-prithvi-eo2-2024
+kind: paper
+title: 'Prithvi-EO-2.0: A Versatile Multi-Temporal Foundation Model for Earth Observation Applications'
+authors:
+- Daniela Szwarcman
+- Sujit Roy
+- Paolo Fraccaro
+- et al.
+year: 2024
+role:
+- methodological
+- state_of_the_art
+domains:
+- earth_observation
+- foundation_models
+- multitemporal
+doi: null
+url: https://arxiv.org/abs/2412.02732
+access: open_access
+importance: 'Strong open EO foundation model: 300M/600M models trained on 4.2M global HLS time-series samples with temporal/location
+  embeddings.'
+connections:
+- repo-prithvi-eo2
+- dataset-hls-v2
+- repo-terratorch
+evidence_note: Highly actionable for downstream fine-tuning and benchmark comparisons.
+link_category: academic

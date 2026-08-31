@@ -1,0 +1,30 @@
+id: paper-rsfm-survey-2025
+kind: paper
+title: 'Foundation Models for Remote Sensing and Earth Observation: A Survey'
+authors:
+- Aoran Xiao
+- Weihao Xuan
+- Junjue Wang
+- Jiaxing Huang
+- Dacheng Tao
+- Shijian Lu
+- Naoto Yokoya
+year: 2025
+role:
+- review
+- state_of_the_art
+domains:
+- earth_observation
+- foundation_models
+doi: 10.1109/MGRS.2025.3576766
+url: https://arxiv.org/abs/2410.16602
+access: open_access_preprint
+importance: Broad taxonomy and benchmark-oriented survey spanning visual, vision-language and other RS foundation models.
+connections:
+- paper-prithvi-eo2-2024
+- paper-terramind-2025
+- paper-satmae-2022
+- repo-dofa
+- repo-clay
+evidence_note: Excellent snowballing root for the foundation-model branch.
+link_category: academic

@@ -1,0 +1,19 @@
+id: api-semanticscholar
+kind: api
+title: Semantic Scholar Academic Graph API
+authors:
+- Allen Institute for AI
+year: 2026
+role:
+- discovery_api
+domains:
+- bibliography
+- literature_discovery
+url: https://api.semanticscholar.org/api-docs/
+access: public_api
+importance: Paper/citation graph API useful as a complementary discovery source.
+connections:
+- api-openalex
+link_category: infrastructure
+doi: null
+evidence_note: ''

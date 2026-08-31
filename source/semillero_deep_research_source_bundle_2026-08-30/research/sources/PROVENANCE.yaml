@@ -1,0 +1,15 @@
+generated: '2026-08-30'
+method: Web research plus conversation/SDD context consolidation
+scope:
+- surface water
+- groundwater potential
+- geothermal prospectivity
+- EO foundation models
+- PINNs
+- implementation resources
+- local-first knowledge graph
+notes:
+- URLs were selected from publisher, official project, official dataset, official
+  GitHub or established documentation pages where possible.
+- Current/recent sources were included up to 2026-08-30.
+- Metadata should be revalidated during canonical ingestion.

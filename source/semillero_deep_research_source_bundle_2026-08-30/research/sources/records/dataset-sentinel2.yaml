@@ -1,0 +1,23 @@
+id: dataset-sentinel2
+kind: dataset
+title: Copernicus Sentinel-2 MSI products
+authors:
+- European Union Copernicus
+- ESA
+year: 2025
+role:
+- dataset
+- sensor
+domains:
+- earth_observation
+- multispectral
+url: https://sentinels.copernicus.eu/sentinel-data-access/sentinel-products/sentinel-2-data-products
+access: open_data
+importance: 10–60 m multispectral data with Level-1C/Level-2A products; central optical source for water, alteration and EO
+  FM research.
+connections:
+- dataset-hls-v2
+- dataset-bigearthnet
+link_category: datasets
+doi: null
+evidence_note: ''

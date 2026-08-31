@@ -1,0 +1,19 @@
+id: infra-pydantic
+kind: documentation
+title: Pydantic JSON Schema documentation
+authors:
+- Pydantic project
+year: 2026
+role:
+- implementation
+domains:
+- data_validation
+- knowledge_graph
+url: https://docs.pydantic.dev/latest/concepts/json_schema/
+access: open_docs
+importance: Typed validation plus standards-compliant JSON Schema generation for scientific records.
+connections:
+- infra-networkx
+link_category: infrastructure
+doi: null
+evidence_note: ''

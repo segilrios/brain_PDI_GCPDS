@@ -1,0 +1,28 @@
+id: paper-hls-v2-2025
+kind: paper
+title: The Harmonized Landsat and Sentinel-2 Version 2.0 Surface Reflectance Dataset
+authors:
+- J. Ju
+- Q. Zhou
+- B. Freitag
+- D. P. Roy
+- H. K. Zhang
+- M. Sridhar
+- et al.
+year: 2025
+role:
+- dataset
+- methodological
+domains:
+- earth_observation
+- surface_reflectance
+- multitemporal
+doi: 10.1016/j.rse.2025.114723
+url: https://hls.gsfc.nasa.gov/documents/
+access: official_project
+importance: Analysis-ready harmonized Landsat/Sentinel-2 dataset underpinning Prithvi-EO-2.0 and many temporal EO workflows.
+connections:
+- dataset-hls-v2
+- paper-prithvi-eo2-2024
+evidence_note: Important data foundation for reproducible temporal EO experiments.
+link_category: academic

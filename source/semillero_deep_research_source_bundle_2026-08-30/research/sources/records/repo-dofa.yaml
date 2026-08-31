@@ -1,0 +1,22 @@
+id: repo-dofa
+kind: repository
+title: 'DOFA: Dynamic One-For-All Foundation Model'
+authors:
+- zhu-xlab
+year: 2024
+role:
+- implementation
+- foundation_model
+domains:
+- earth_observation
+- foundation_models
+- multimodal
+url: https://github.com/zhu-xlab/DOFA
+access: open_source
+importance: Unified EO model designed to handle arbitrary channel counts and multiple sensor modalities.
+connections:
+- paper-rsfm-survey-2025
+- repo-terratorch
+link_category: implementation
+doi: null
+evidence_note: ''

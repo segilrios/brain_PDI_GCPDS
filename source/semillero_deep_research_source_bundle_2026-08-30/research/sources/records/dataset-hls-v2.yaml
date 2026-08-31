@@ -1,0 +1,23 @@
+id: dataset-hls-v2
+kind: dataset
+title: Harmonized Landsat and Sentinel-2 v2.0 (HLS)
+authors:
+- NASA
+year: 2025
+role:
+- dataset
+- analysis_ready_data
+domains:
+- earth_observation
+- surface_reflectance
+- multitemporal
+url: https://hls.gsfc.nasa.gov/data-access-and-tools/
+access: open_data
+importance: Analysis-ready harmonized Landsat/Sentinel-2 surface reflectance with frequent revisit; core pretraining source
+  for Prithvi-EO-2.0.
+connections:
+- paper-hls-v2-2025
+- paper-prithvi-eo2-2024
+link_category: datasets
+doi: null
+evidence_note: ''

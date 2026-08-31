@@ -1,0 +1,22 @@
+id: repo-torchgeo
+kind: repository
+title: TorchGeo
+authors:
+- TorchGeo community
+year: 2025
+role:
+- implementation
+- tooling
+domains:
+- earth_observation
+- deep_learning
+- datasets
+url: https://github.com/torchgeo/torchgeo
+access: open_source
+importance: PyTorch geospatial datasets, samplers, transforms and pretrained models; strong implementation substrate.
+connections:
+- repo-terratorch
+- dataset-bigearthnet
+link_category: implementation
+doi: null
+evidence_note: ''

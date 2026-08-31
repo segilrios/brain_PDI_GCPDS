@@ -1,0 +1,19 @@
+id: infra-sqlite-fts5
+kind: documentation
+title: SQLite FTS5 Extension
+authors:
+- SQLite project
+year: 2026
+role:
+- implementation
+domains:
+- search
+- knowledge_graph
+url: https://www.sqlite.org/fts5.html
+access: open_docs
+importance: Local deterministic full-text search layer appropriate for a rebuildable V1 index.
+connections:
+- infra-networkx
+link_category: infrastructure
+doi: null
+evidence_note: ''

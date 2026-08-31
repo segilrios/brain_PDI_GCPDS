@@ -1,0 +1,21 @@
+id: dataset-landsat-c2-sr
+kind: dataset
+title: Landsat Collection 2 Surface Reflectance
+authors:
+- USGS
+year: 2020
+role:
+- dataset
+- foundational
+domains:
+- earth_observation
+- surface_reflectance
+url: https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-reflectance
+access: open_data
+importance: Core 30 m analysis-ready optical record used broadly for long-term surface-water and geothermal studies.
+connections:
+- dataset-jrc-gsw-v1-4
+- dataset-hls-v2
+link_category: datasets
+doi: null
+evidence_note: ''

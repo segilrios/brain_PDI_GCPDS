@@ -1,0 +1,22 @@
+id: dataset-jrc-gsw-v1-4
+kind: dataset
+title: JRC Global Surface Water Mapping Layers v1.4
+authors:
+- European Commission JRC
+- Google
+year: 2021
+role:
+- benchmark
+- dataset
+domains:
+- surface_water
+- earth_observation
+url: https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_GlobalSurfaceWater
+access: open_data
+importance: Global 30 m surface-water occurrence/change layers derived from 4.7M+ Landsat scenes through 2021.
+connections:
+- paper-pekel-2016-gsw
+- dataset-landsat-c2-sr
+link_category: datasets
+doi: null
+evidence_note: ''

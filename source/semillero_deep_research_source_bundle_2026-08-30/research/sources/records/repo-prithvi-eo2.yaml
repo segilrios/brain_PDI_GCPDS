@@ -1,0 +1,21 @@
+id: repo-prithvi-eo2
+kind: repository
+title: NASA-IMPACT/Prithvi-EO-2.0
+authors:
+- NASA IMPACT
+- IBM Research
+year: 2024
+role:
+- implementation
+domains:
+- earth_observation
+- foundation_models
+url: https://github.com/NASA-IMPACT/Prithvi-EO-2.0
+access: open_source
+importance: Official code/examples for Prithvi-EO-2.0 fine-tuning.
+connections:
+- paper-prithvi-eo2-2024
+- repo-terratorch
+link_category: implementation
+doi: null
+evidence_note: ''

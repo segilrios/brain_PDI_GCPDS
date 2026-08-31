@@ -1,0 +1,28 @@
+id: paper-geothermal-japan-2026
+kind: paper
+title: Evaluating the Efficiency of Machine Learning Algorithms in Identifying Geothermal Energy Potential Areas in Akita
+  and Iwate Provinces, Japan
+authors:
+- Majid Kiavarz
+- Mohammadreza Jelokhani-Niaraki
+- Avin Meysami
+- Yasaman Ghorbani
+- Najmeh Neysani Samany
+year: 2026
+role:
+- application
+- state_of_the_art
+domains:
+- geothermal
+- machine_learning
+- remote_sensing
+doi: 10.5194/isprs-archives-XLIX-B2-2026-699-2026
+url: https://isprs-archives.copernicus.org/articles/XLIX-B2-2026/699/2026/
+access: open_access
+importance: Very recent ML application under limited well data; useful for data-scarcity and validation discussions.
+connections:
+- concept-geothermal-prospectivity
+- concept-data-scarcity
+- concept-random-forest
+evidence_note: Useful contemporary case, but reported accuracy should be interpreted with sampling/validation design in mind.
+link_category: academic

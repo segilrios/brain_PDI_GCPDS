@@ -1,0 +1,21 @@
+id: repo-clay
+kind: repository
+title: Clay Foundation Model
+authors:
+- Clay Foundation
+year: 2025
+role:
+- implementation
+- foundation_model
+domains:
+- earth_observation
+- foundation_models
+url: https://github.com/Clay-foundation/model
+access: open_source
+importance: Open EO foundation model with geospatial/temporal context and Sentinel-1/Sentinel-2/DEM-oriented workflows.
+connections:
+- paper-rsfm-survey-2025
+- repo-torchgeo
+link_category: implementation
+doi: null
+evidence_note: ''

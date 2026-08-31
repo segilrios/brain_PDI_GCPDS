@@ -1,0 +1,95 @@
+- id: repo-prithvi-eo2
+  title: NASA-IMPACT/Prithvi-EO-2.0
+  url: https://github.com/NASA-IMPACT/Prithvi-EO-2.0
+  year: 2024
+  access: open_source
+  importance: Official code/examples for Prithvi-EO-2.0 fine-tuning.
+  domains:
+  - earth_observation
+  - foundation_models
+- id: repo-terramind
+  title: IBM/terramind
+  url: https://github.com/IBM/terramind
+  year: 2025
+  access: open_source
+  importance: Official TerraMind code examples, generation and fine-tuning.
+  domains:
+  - earth_observation
+  - foundation_models
+  - multimodal
+- id: repo-clay
+  title: Clay Foundation Model
+  url: https://github.com/Clay-foundation/model
+  year: 2025
+  access: open_source
+  importance: Open EO foundation model with geospatial/temporal context and Sentinel-1/Sentinel-2/DEM-oriented workflows.
+  domains:
+  - earth_observation
+  - foundation_models
+- id: repo-dofa
+  title: 'DOFA: Dynamic One-For-All Foundation Model'
+  url: https://github.com/zhu-xlab/DOFA
+  year: 2024
+  access: open_source
+  importance: Unified EO model designed to handle arbitrary channel counts and multiple sensor modalities.
+  domains:
+  - earth_observation
+  - foundation_models
+  - multimodal
+- id: repo-satmae
+  title: sustainlab-group/SatMAE
+  url: https://github.com/sustainlab-group/SatMAE
+  year: 2022
+  access: open_source
+  importance: Official SatMAE code for temporal and multispectral masked-autoencoder pretraining.
+  domains:
+  - earth_observation
+  - foundation_models
+- id: repo-terratorch
+  title: TerraTorch
+  url: https://github.com/torchgeo/terratorch
+  year: 2024
+  access: open_source
+  importance: Fine-tuning framework for geospatial foundation models; integrates with TorchGeo and multiple model families.
+  domains:
+  - earth_observation
+  - foundation_models
+  - deep_learning
+- id: repo-torchgeo
+  title: TorchGeo
+  url: https://github.com/torchgeo/torchgeo
+  year: 2025
+  access: open_source
+  importance: PyTorch geospatial datasets, samplers, transforms and pretrained models; strong implementation substrate.
+  domains:
+  - earth_observation
+  - deep_learning
+  - datasets
+- id: repo-samgeo
+  title: segment-geospatial (SamGeo)
+  url: https://github.com/opengeos/segment-geospatial
+  year: 2023
+  access: open_source
+  importance: Practical geospatial SAM tooling for raster/vector segmentation and interactive workflows.
+  domains:
+  - earth_observation
+  - segmentation
+  - foundation_models
+- id: repo-satlas
+  title: allenai/satlas
+  url: https://github.com/allenai/satlas
+  year: 2023
+  access: open_source
+  importance: Satlas geospatial data plus SatlasPretrain dataset/model resources.
+  domains:
+  - earth_observation
+  - foundation_models
+- id: repo-satlas-models
+  title: allenai/satlaspretrain_models
+  url: https://github.com/allenai/satlaspretrain_models
+  year: 2023
+  access: open_source
+  importance: Pretrained models for Sentinel-1/2, Landsat and aerial imagery.
+  domains:
+  - earth_observation
+  - foundation_models

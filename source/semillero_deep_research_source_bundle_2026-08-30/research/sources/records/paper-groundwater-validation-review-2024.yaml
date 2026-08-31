@@ -1,0 +1,24 @@
+id: paper-groundwater-validation-review-2024
+kind: paper
+title: 'Analysis of methods used to validate remote sensing and GIS-based groundwater potential maps in the last two decades:
+  A review'
+authors: []
+year: 2024
+role:
+- review
+- methodological
+domains:
+- groundwater_potential
+- hydrogeology
+- remote_sensing
+- gis
+doi: 10.1016/j.geogeo.2023.100245
+url: https://doi.org/10.1016/j.geogeo.2023.100245
+access: open_access
+importance: Reviews 125 studies and makes validation quality a central issue; field data reflecting aquifer productivity are
+  preferable validation evidence.
+connections:
+- concept-groundwater-potential
+- concept-field-validation
+evidence_note: Groundwater-potential maps are indirect inference products and require field/hydrogeologic validation.
+link_category: academic

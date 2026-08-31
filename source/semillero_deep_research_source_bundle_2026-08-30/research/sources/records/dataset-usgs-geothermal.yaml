@@ -1,0 +1,22 @@
+id: dataset-usgs-geothermal
+kind: dataset_catalog
+title: USGS Geothermal Data Releases
+authors:
+- USGS
+year: 2026
+role:
+- dataset_catalog
+domains:
+- geothermal
+- geophysics
+- geochemistry
+url: https://www.usgs.gov/search?f%5B0%5D=usgs_facet%3Aproducts_data&keywords=Geothermal
+access: open_data
+importance: Official geothermal data releases including magnetotellurics, resource favorability and geochemical/hydrologic
+  data.
+connections:
+- concept-geothermal-prospectivity
+- concept-geophysics
+link_category: datasets
+doi: null
+evidence_note: ''

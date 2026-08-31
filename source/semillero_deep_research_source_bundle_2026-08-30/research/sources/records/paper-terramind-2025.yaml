@@ -1,0 +1,27 @@
+id: paper-terramind-2025
+kind: paper
+title: 'TerraMind: Large-Scale Generative Multimodality for Earth Observation'
+authors:
+- Johannes Jakubik
+- Felix Yang
+- Benedikt Blumenstiel
+- et al.
+year: 2025
+role:
+- methodological
+- state_of_the_art
+domains:
+- earth_observation
+- foundation_models
+- multimodal
+- generative_ai
+doi: null
+url: https://arxiv.org/abs/2504.11171
+access: open_access
+importance: Any-to-any generative multimodal EO foundation model trained across nine modalities; introduces Thinking-in-Modalities.
+connections:
+- repo-terramind
+- repo-terratorch
+- concept-multimodal-eo
+evidence_note: Especially relevant for optical+SAR/multimodal research hypotheses.
+link_category: academic

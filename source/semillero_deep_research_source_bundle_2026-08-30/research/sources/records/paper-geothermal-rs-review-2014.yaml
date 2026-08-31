@@ -1,0 +1,30 @@
+id: paper-geothermal-rs-review-2014
+kind: paper
+title: 'Geologic remote sensing for geothermal exploration: A review'
+authors:
+- Freek van der Meer
+- Christoph Hecker
+- Frank van Ruitenbeek
+- Harald van der Werff
+- Charlotte de Wijkerslooth
+- Carolina Wechsler
+year: 2014
+role:
+- foundational
+- review
+domains:
+- geothermal
+- remote_sensing
+- geology
+doi: 10.1016/j.jag.2014.05.007
+url: https://www.sciencedirect.com/science/article/abs/pii/S0303243414001275
+access: publisher_page
+importance: Foundational review connecting SWIR alteration mineralogy, TIR temperature/heat flux and InSAR deformation with
+  geothermal exploration.
+connections:
+- concept-geothermal-prospectivity
+- concept-swir
+- concept-tir
+- concept-insar
+evidence_note: Remote-sensing observables are exploration evidence/proxies, not reservoir confirmation.
+link_category: academic

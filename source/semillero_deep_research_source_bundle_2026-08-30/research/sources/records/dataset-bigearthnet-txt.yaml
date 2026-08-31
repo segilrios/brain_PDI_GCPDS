@@ -1,0 +1,24 @@
+id: dataset-bigearthnet-txt
+kind: dataset
+title: BigEarthNet.txt
+authors:
+- Johann-Ludwig Herzog
+- Mathis Jürgen Adler
+- et al.
+year: 2026
+role:
+- benchmark
+- state_of_the_art
+domains:
+- earth_observation
+- multimodal
+- vision_language
+url: https://txt.bigearth.net/
+access: open_data
+importance: '2026 multi-sensor image-text benchmark: ~464k co-registered S1/S2 images and ~9.6M S1-S2-text triplets.'
+connections:
+- dataset-bigearthnet
+- concept-multimodal-eo
+link_category: datasets
+doi: null
+evidence_note: ''

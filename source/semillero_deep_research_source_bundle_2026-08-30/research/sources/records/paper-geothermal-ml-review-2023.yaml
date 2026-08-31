@@ -1,0 +1,25 @@
+id: paper-geothermal-ml-review-2023
+kind: paper
+title: Advances in geothermal energy prospectivity mapping research based on machine learning in the age of big data
+authors:
+- Yongyi Li
+- Ghaffar Ali
+- Abdul Rehman Akbar
+year: 2023
+role:
+- review
+- methodological
+domains:
+- geothermal
+- machine_learning
+- gis
+doi: 10.1016/j.seta.2023.103550
+url: https://www.sciencedirect.com/science/article/pii/S221313882300543X
+access: publisher_page
+importance: Maps the transition from conventional prospectivity mapping to ML-enhanced play fairway analysis.
+connections:
+- concept-geothermal-prospectivity
+- concept-play-fairway-analysis
+- concept-machine-learning
+evidence_note: Useful methodology bridge from expert weighting to data-driven models.
+link_category: academic

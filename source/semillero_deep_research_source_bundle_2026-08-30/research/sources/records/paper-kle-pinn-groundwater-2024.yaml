@@ -1,0 +1,29 @@
+id: paper-kle-pinn-groundwater-2024
+kind: paper
+title: 'Groundwater inverse modeling: Physics-informed neural network with disentangled constraints and errors'
+authors:
+- Yuzhe Ji
+- Yuanyuan Zha
+- Tian-Chyi J. Yeh
+- Liangsheng Shi
+- Yanling Wang
+year: 2024
+role:
+- methodological
+- state_of_the_art
+domains:
+- groundwater
+- pinns
+- inverse_problems
+- hydrogeology
+doi: null
+url: https://www.sciencedirect.com/science/article/pii/S0022169424010990
+access: publisher_page
+importance: 'Concrete physics-informed inverse-modeling route: estimates hydraulic conductivity using a PINN plus Karhunen–Loève
+  expansion.'
+connections:
+- concept-pinn
+- concept-groundwater-flow
+- concept-hydraulic-conductivity
+evidence_note: Physics-informed inference concerns subsurface flow/parameters, not direct satellite detection of groundwater.
+link_category: academic

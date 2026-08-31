@@ -1,0 +1,32 @@
+id: paper-satmae-2022
+kind: paper
+title: 'SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery'
+authors:
+- Yezhen Cong
+- Samar Khanna
+- Chenlin Meng
+- Patrick Liu
+- Erik Rozi
+- Yutong He
+- Marshall Burke
+- David B. Lobell
+- Stefano Ermon
+year: 2022
+role:
+- seminal
+- methodological
+domains:
+- earth_observation
+- foundation_models
+- transformers
+- self_supervised_learning
+doi: null
+url: https://arxiv.org/abs/2207.08051
+access: open_access
+importance: Seminal EO masked-autoencoder work explicitly modeling temporal and multispectral satellite structure.
+connections:
+- repo-satmae
+- concept-masked-autoencoder
+- concept-transformer
+evidence_note: Foundational precursor for later EO foundation models.
+link_category: academic

@@ -1,0 +1,20 @@
+id: repo-satlas
+kind: repository
+title: allenai/satlas
+authors:
+- Allen Institute for AI
+year: 2023
+role:
+- implementation
+- dataset
+domains:
+- earth_observation
+- foundation_models
+url: https://github.com/allenai/satlas
+access: open_source
+importance: Satlas geospatial data plus SatlasPretrain dataset/model resources.
+connections:
+- repo-satlas-models
+link_category: implementation
+doi: null
+evidence_note: ''

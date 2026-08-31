@@ -1,0 +1,22 @@
+id: repo-terramind
+kind: repository
+title: IBM/terramind
+authors:
+- IBM
+- ESA Φ-lab
+year: 2025
+role:
+- implementation
+domains:
+- earth_observation
+- foundation_models
+- multimodal
+url: https://github.com/IBM/terramind
+access: open_source
+importance: Official TerraMind code examples, generation and fine-tuning.
+connections:
+- paper-terramind-2025
+- repo-terratorch
+link_category: implementation
+doi: null
+evidence_note: ''

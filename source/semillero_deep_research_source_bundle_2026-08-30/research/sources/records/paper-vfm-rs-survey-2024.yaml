@@ -1,0 +1,24 @@
+id: paper-vfm-rs-survey-2024
+kind: paper
+title: 'Vision Foundation Models in Remote Sensing: A Survey'
+authors:
+- Siqi Lu
+- Junlin Guo
+- James R Zimmer-Dauphinee
+- et al.
+year: 2024
+role:
+- review
+domains:
+- earth_observation
+- foundation_models
+- computer_vision
+doi: null
+url: https://arxiv.org/abs/2408.03464
+access: open_access
+importance: Complementary survey of vision foundation models, pretraining datasets and transfer/generalization issues.
+connections:
+- paper-rsfm-survey-2025
+- concept-foundation-model
+evidence_note: Useful for model-family comparison and research-gap triangulation.
+link_category: academic
