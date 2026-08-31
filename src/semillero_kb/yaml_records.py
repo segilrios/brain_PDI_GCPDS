@@ -15,13 +15,8 @@ _RECORD_TYPES = {
 }
 
 
-def load_yaml(path: str | Path) -> BaseModel:
-    """Load one canonical YAML record selected by its stable ID prefix."""
-    path = Path(path)
-    try:
-        data = yaml.safe_load(path.read_text(encoding="utf-8"))
-    except (OSError, yaml.YAMLError) as error:
-        raise ValueError(f"cannot read YAML: {error}") from error
+def load_record(data: object) -> BaseModel:
+    """Load one record mapping selected by its stable ID prefix."""
     if not isinstance(data, dict):
         raise ValueError("record must be a YAML mapping")
     identifier = data.get("id")
@@ -34,6 +29,16 @@ def load_yaml(path: str | Path) -> BaseModel:
         return record_type.model_validate(data)
     except ValidationError as error:
         raise ValueError(f"invalid {record_type.__name__} record: {error}") from error
+
+
+def load_yaml(path: str | Path) -> BaseModel:
+    """Load one canonical YAML record selected by its stable ID prefix."""
+    path = Path(path)
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError) as error:
+        raise ValueError(f"cannot read YAML: {error}") from error
+    return load_record(data)
 
 
 def dump_yaml(record: BaseModel) -> str:

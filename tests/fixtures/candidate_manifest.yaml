@@ -1,0 +1,35 @@
+records:
+  - id: source:synthetic-candidate
+    provenance: synthetic fixture
+    version: 1
+    title: Candidate source
+    authors: [{id: author:fixture, provenance: synthetic fixture, version: 1, name: Fixture Author}]
+    year: 2026
+    url: https://example.test/source
+    venue: Fixture venue
+    publication_type: report
+    domains: [surface_water_observation]
+    keywords: [fixture]
+    access_date: 2026-08-31
+    availability_status: external_only
+    license: CC-BY-4.0
+  - id: dataset:synthetic-water
+    provenance: synthetic fixture
+    version: 1
+    canonical_source: Synthetic dataset
+    url: https://example.test/dataset
+    reference_version: v1
+    license: CC-BY-4.0
+    acquisition_date: 2026-08-31
+    availability_status: external_only
+    local_path: assets/synthetic-water.csv
+    checksum: sha256:synthetic-water
+  - id: repository:synthetic-code
+    provenance: synthetic fixture
+    version: 1
+    canonical_source: Synthetic repository
+    url: https://example.test/repository
+    reference_version: abc123
+    license: MIT
+    acquisition_date: 2026-08-31
+    availability_status: external_only
