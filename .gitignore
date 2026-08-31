@@ -1,2 +1,6 @@
 # Local AI runtime state
 .atl/
+
+# Python test and bytecode artifacts
+__pycache__/
+.pytest_cache/

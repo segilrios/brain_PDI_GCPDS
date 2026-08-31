@@ -1,0 +1,12 @@
+{
+  "id": "claim:synthetic-water-observation",
+  "provenance": "synthetic fixture",
+  "version": 1,
+  "statement": "A synthetic source reports a water observation.",
+  "source_id": "source:synthetic-paper",
+  "locator": {"kind": "pdf_page_section", "coordinates": {"page": "1", "section": "Methods"}},
+  "extraction_date": "2026-08-30",
+  "assertion_type": "observation",
+  "confidence": 0.7,
+  "confidence_rationale": "Synthetic test fixture"
+}
