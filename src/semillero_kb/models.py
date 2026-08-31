@@ -1,5 +1,5 @@
 """Validated records; durable scientific data remains in Git-managed YAML."""
-from datetime import date
+from datetime import date, datetime
 from enum import StrEnum
 from typing import Annotated
 
@@ -56,6 +56,27 @@ class VerificationStatus(StrEnum):
     INCONCLUSIVE = "inconclusive"
 
 
+class AdmissionState(StrEnum):
+    CANDIDATE = "candidate"
+    HUMAN_SEED = "human_seed"
+    VERIFIED_EXPANSION = "verified_expansion"
+
+
+class CurationEvent(BaseModel):
+    source_state: AdmissionState
+    target_state: AdmissionState
+    curator: str = Field(min_length=1)
+    curated_at: datetime
+    rationale: str = Field(min_length=1)
+    validation_evidence: list[str] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def requires_evidence_for_verified_expansion(self):
+        if self.target_state is AdmissionState.VERIFIED_EXPANSION and not self.validation_evidence:
+            raise ValueError("verified expansion requires validation evidence")
+        return self
+
+
 class AvailabilityStatus(StrEnum):
     AVAILABLE_LOCAL = "available_local"
     EXTERNAL_ONLY = "external_only"
@@ -98,6 +119,8 @@ class Record(BaseModel):
     lifecycle: Lifecycle = Lifecycle.ACTIVE
     predecessor_id: StableId | None = None
     lifecycle_history: list[LifecycleTransition] = Field(default_factory=list)
+    admission_state: AdmissionState = AdmissionState.CANDIDATE
+    curation_history: list[CurationEvent] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def preserves_lifecycle_history(self):
@@ -112,6 +135,19 @@ class Record(BaseModel):
             state = transition.next_state
         if state is not self.lifecycle:
             raise ValueError("lifecycle must match its recorded transition history")
+        admission = AdmissionState.CANDIDATE
+        allowed_admission = {
+            AdmissionState.CANDIDATE: {AdmissionState.HUMAN_SEED},
+            AdmissionState.HUMAN_SEED: {AdmissionState.VERIFIED_EXPANSION},
+        }
+        for event in self.curation_history:
+            if event.source_state is not admission:
+                raise ValueError("curation history must be contiguous")
+            if event.target_state not in allowed_admission.get(admission, set()):
+                raise ValueError("curation transition is not allowed")
+            admission = event.target_state
+        if admission is not self.admission_state:
+            raise ValueError("admission state must match its recorded curation history")
         return self
 
 
@@ -206,6 +242,8 @@ class Claim(Record):
     def blocks_unsupported_promotion(self):
         if self.assertion_type is AssertionType.INFERENCE and self.verification_status is not VerificationStatus.UNVERIFIED:
             raise ValueError("an inference cannot self-promote to verified")
+        if self.assertion_type is AssertionType.INFERENCE and self.admission_state is AdmissionState.VERIFIED_EXPANSION:
+            raise ValueError("an inference cannot become a verified expansion")
         spo_fields = (self.subject, self.predicate, self.object)
         if any(spo_fields) and not all(spo_fields):
             raise ValueError("SPO projection requires subject, predicate, and object")

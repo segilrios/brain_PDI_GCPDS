@@ -9,6 +9,7 @@ from semillero_kb.yaml_records import dump_yaml, load_yaml
 
 
 FIXTURE = Path(__file__).parents[1] / "fixtures" / "valid_claim.yaml"
+CURATION_FIXTURE = Path(__file__).parents[1] / "fixtures" / "candidate_curation.yaml"
 
 
 def test_yaml_round_trip_is_deterministic_and_preserves_identity():
@@ -52,3 +53,14 @@ def test_yaml_persists_lifecycle_history(tmp_path):
     path.write_text(dump_yaml(record), encoding="utf-8")
     loaded = load_yaml(path)
     assert loaded.lifecycle_history[-1].actor == "curator"
+
+
+def test_cli_curate_and_promote_are_fail_closed(tmp_path, capsys):
+    candidate = tmp_path / "candidate.yaml"
+    candidate.write_text(CURATION_FIXTURE.read_text(encoding="utf-8"), encoding="utf-8")
+    seed, verified = tmp_path / "seed.yaml", tmp_path / "verified.yaml"
+    assert main(["curate", str(candidate), "--curator", "curator:ada", "--reason", "relevant", "--output", str(seed)]) == 0
+    assert main(["promote", str(seed), "--curator", "curator:ada", "--reason", "checked", "--validation-evidence", "evidence:review", "--output", str(verified)]) == 0
+    assert load_yaml(verified).admission_state == "verified_expansion"
+    with pytest.raises(SystemExit): main(["promote", str(candidate), "--curator", "curator:ada", "--reason", "skip", "--validation-evidence", "evidence:x", "--output", str(seed)])
+    assert "only human seeds can be promoted" in capsys.readouterr().err

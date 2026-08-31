@@ -6,9 +6,10 @@ import pytest
 from pydantic import ValidationError
 
 from semillero_kb.models import (
-    Author, AvailabilityStatus, Claim, DatasetReference, Entity, Evidence, EvidenceLocator,
+    AdmissionState, Author, AvailabilityStatus, Claim, CurationEvent, DatasetReference, Entity, Evidence, EvidenceLocator,
     Experiment, Lifecycle, LifecycleTransition, Record, Relation, RepositoryReference, Result, Source,
 )
+from semillero_kb.curation import curate_record, promote_record
 from semillero_kb.validation import (
     ResearchDomain, claim_json_schema, experiment_json_schemas, reference_json_schemas, transition_record,
     validate_domain_relation,
@@ -139,3 +140,33 @@ def test_invalid_lifecycle_transitions_fail_closed_without_delete_api():
                                   actor="curator", reason="invalid", transition_date=date.today())
     with pytest.raises(ValueError): transition_record(retracted, Lifecycle.ACTIVE, actor="curator", reason="restore", transition_date=date.today())
     assert not hasattr(__import__("semillero_kb.validation", fromlist=["delete_record"]), "delete_record")
+
+
+def test_curation_requires_human_seed_and_preserves_audit_history():
+    candidate = Record(**record_data("record:candidate"))
+    seed = curate_record(candidate, curator="curator:ada", rationale="Selected for relevance", curated_at=date.today())
+    verified = promote_record(seed, curator="curator:ada", rationale="Identity and scope checked",
+                              curated_at=date.today(), validation_evidence=["evidence:review"])
+    assert candidate.admission_state is AdmissionState.CANDIDATE
+    assert seed.admission_state is AdmissionState.HUMAN_SEED
+    assert verified.admission_state is AdmissionState.VERIFIED_EXPANSION
+    assert [(event.source_state, event.target_state, event.curator) for event in verified.curation_history] == [
+        (AdmissionState.CANDIDATE, AdmissionState.HUMAN_SEED, "curator:ada"),
+        (AdmissionState.HUMAN_SEED, AdmissionState.VERIFIED_EXPANSION, "curator:ada"),
+    ]
+    conflict = Claim.model_validate(payload() | {"verification_status": "contradicted"})
+    assert curate_record(conflict, curator="curator:ada", rationale="Keep conflicting evidence", curated_at=date.today()).verification_status == "contradicted"
+
+
+def test_curation_blocks_self_promotion_inference_and_missing_evidence():
+    candidate = Record(**record_data("record:candidate"))
+    with pytest.raises(ValueError, match="human seeds"): promote_record(
+        candidate, curator="curator:ada", rationale="skip", curated_at=date.today(), validation_evidence=["evidence:x"])
+    with pytest.raises(ValidationError, match="curation transition"): Record(**record_data("record:bad"),
+        admission_state="verified_expansion", curation_history=[CurationEvent(
+            source_state="candidate", target_state="verified_expansion", curator="curator:ada",
+            curated_at=date.today(), rationale="invalid", validation_evidence=["evidence:x"])])
+    inference = Claim.model_validate(payload() | {"assertion_type": "inference"})
+    seed = curate_record(inference, curator="curator:ada", rationale="Relevant lead", curated_at=date.today())
+    with pytest.raises(ValueError, match="inferred"): promote_record(
+        seed, curator="curator:ada", rationale="automated", curated_at=date.today(), validation_evidence=["evidence:x"])
